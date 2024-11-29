@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+    <g data-name="ico_main_on">
+        <g data-name="그룹 6479">
+            <path data-name="패스 12125" d="M7 21h10" transform="translate(-1.5 -2)" style="stroke-linecap:round;stroke-linejoin:round;fill:none;stroke:#fff;stroke-width:1.5px"/>
+            <path data-name="패스 12126" d="M2 14.486V3.514A.512.512 0 0 1 2.51 3h15.98a.512.512 0 0 1 .51.514v10.972a.512.512 0 0 1-.51.514H2.51a.512.512 0 0 1-.51-.514z" style="fill:none;stroke:#fff;stroke-width:1.5px"/>
+        </g>
+        <path data-name="패스 12130" d="m3.5 6.769 2.692 2.693L10.5 3l3.769 2.692" transform="translate(2 3.154)" style="stroke-linecap:round;stroke-linejoin:round;fill:none;stroke:#fff;stroke-width:1.5px"/>
+    </g>
+</svg>
