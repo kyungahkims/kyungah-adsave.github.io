@@ -663,6 +663,9 @@ footer p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
 }
 .search_wrap .calendar input {
@@ -761,17 +764,14 @@ footer p {
   margin-top: 15px !important;
 }
 
-.daterangepicker .drp-buttons {
-  display: none !important;
-}
-
 .daterangepicker.show-calendar .ranges {
   overflow-y: scroll;
   height: 219px;
 }
 
 .daterangepicker td.active,
-.daterangepicker td.active:hover {
+.daterangepicker td.active:hover,
+.daterangepicker .ranges li.active {
   background-color: #17a2ff !important;
 }
 
@@ -780,8 +780,4 @@ footer p {
 .daterangepicker td.off.start-date,
 .daterangepicker td.off.end-date {
   color: #fff !important;
-}
-
-.daterangepicker .ranges li.active {
-  background-color: #17a2ff !important;
 }/*# sourceMappingURL=common.css.map */

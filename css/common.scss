@@ -631,6 +631,7 @@ footer {
 
 		.input_wrap {
 			display: flex;
+			justify-content: center;
 			width: 100%;
 		}
 
@@ -731,17 +732,14 @@ footer {
 	margin-top: 15px !important;
 }
 
-.daterangepicker .drp-buttons {
-	display: none !important;
-}
-
 .daterangepicker.show-calendar .ranges {
 	overflow-y: scroll;
 	height: 219px;
 }
 
 .daterangepicker td.active,
-.daterangepicker td.active:hover {
+.daterangepicker td.active:hover,
+.daterangepicker .ranges li.active {
 	background-color: #17a2ff !important;
 }
 
@@ -750,8 +748,4 @@ footer {
 .daterangepicker td.off.start-date,
 .daterangepicker td.off.end-date {
 	color: #fff !important;
-}
-
-.daterangepicker .ranges li.active {
-	background-color: #17a2ff !important;
 }
