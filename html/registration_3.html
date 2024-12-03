@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/registration.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css">
+	<link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+	<link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+	<script src="../js/jquery-3.5.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+	<title>모비애드세이브</title>
+</head>
+
+<body>
+	<div class="wrap">
+		<header>
+			<a href="#" title="홈으로 이동"><img src="../img/img-logo.svg" alt="애드세이브 로고"></a>
+			<div class="header_menu">
+				<a href="#" class="mobisens" title="모비센스로 이동"><img src="../img/img-logo-mobsense.png" alt="모비센스 로고"></a>
+				<span class="user">홍길동님</span>
+				<button type="button" aria-label="마이페이지 열고 닫기" class="user_btn"></button>
+				<nav class="user_nav" aria-label="사용자 메뉴">
+					<ul>
+						<li><a href="#">정보 수정</a></li>
+						<li><a href="#">정산 프로필</a></li>
+						<li><a href="#">로그아웃</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header><!-- header -->
+		<div class="wrapper">
+			<aside>
+				<div class="aside_title">
+					<h2>매체 센터</h2>
+					<button type="button" aria-label="사이드 메뉴 축소 확대 버튼" class="aside_btn">
+						<div class="navi-bars">
+							<div class="bar bar1"></div>
+							<div class="bar bar2"></div>
+							<div class="bar bar3"></div>
+						</div>
+					</button>
+				</div>
+				<nav aria-label="주 메뉴">
+					<ul class="navi_wrap">
+						<li class="navi summary"><a href="#"><span>개요</span></a></li>
+						<li class="navi analysis"><a href="#"><span>분석 센터</span></a></li>
+						<li class="navi script navi_sub"><span>스크립트</span></li>
+						<li class="subs">
+							<ul>
+								<li><a href="#">스크립트 발급</a></li>
+								<li><a href="#">스크립트 가이드</a></li>
+							</ul>
+						</li>
+						<li class="navi registration active"><a href="#"><span>지면 등록</span></a></li>
+						<li class="navi management"><a href="#"><span>지면 관리</span></a></li>
+						<li class="navi report navi_sub"><span>보고서</span></li>
+						<li class="subs">
+							<ul>
+								<li><a href="#">일자별 수익금 보고서</a></li>
+								<li><a href="#">지면별 수익금 보고서</a></li>
+							</ul>
+						</li>
+						<li class="navi notice"><a href="#"><span>공지사항</span></a></li>
+					</ul>
+				</nav>
+			</aside><!-- aside -->
+			<section class="content">
+				<h1>애드세이브 > 지면 최적화</h1>
+				<div class="box_content">
+					<h2>광고 선택</h2>
+					<ul class="form_wrap">
+						<li>
+							<div class="title">DSP 선택</div>
+							<div class="radio_wrap">
+								<span>
+									<input type="radio" id="radio1" name="dsp" checked>
+									<label for="radio1">모비온</label>
+								</span>
+								<span>
+									<input type="radio" id="radio2" name="dsp">
+									<label for="radio2">구글</label>
+								</span>
+								<span>
+									<input type="radio" id="radio3" name="dsp">
+									<label for="radio3">데이블</label>
+								</span>
+								<span>
+									<input type="radio" id="radio4" name="dsp">
+									<label for="radio4">크리테오</label>
+								</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="box_content">
+					<h2>지면 상세 정보</h2>
+					<ul class="form_wrap">
+						<li class="flex_s">
+							<div class="title">지면 스크립트 설치
+								<div class="info">
+									<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+									<ul class="info_box">
+										<li>내용 넣어주세요</li>
+									</ul>
+								</div>
+							</div>
+							<div>
+								<p class="info_p">다음 광고 코드를 사용하여 지면을 활성화하고 광고 게재를 시작하세요.</p>
+								<span class="red">지면이 활성화되면 광고가 표시됩니다.</span>
+								<div class="text_box">
+									<textarea disabled><!-- <script> try { // Account ID 적용  if (!wcs_add) var wcs_add = {}; wcs_add["wa"] = "s_39723f2690f9"; // 네이버  페이 White list가  있을 경우  wcs.checkoutWhitelist = ["engsmall1.cafe24.com", "www.engsmall1.cafe24.com", </script>  -->
+									</textarea>
+								</div>
+								<ol>
+									<li>1. 위의 코드를 복사하세요.</li>
+									<li>2. 사이트 HTML에서 광고 노출을 원하시는 영역 내 코드를 붙여넣으세요.</li>
+									<li>3. 코드 설치를 완료하신 후 게재상태를 변경해주세요.</li>
+								</ol>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="box_content">
+					<h2>지면 상세 정보</h2>
+					<ul class="form_wrap">
+						<li class="flex_s">
+							<div class="title">스크립트 수정
+								<div class="info">
+									<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+									<ul class="info_box">
+										<li>내용 넣어주세요</li>
+									</ul>
+								</div>
+							</div>
+							<div>
+								<textarea placeholder="스크립트 수정 시 등록된 값으로 매체 제공용 지면 상세 정보 > 지면 스크립트 설치 값이 변경됩니다."></textarea>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="box_content">
+					<h2>광고 송출</h2>
+					<ul class="form_wrap">
+						<li>
+							<div class="title">배너 필터</div>
+							<div class="radio_wrap">
+								<span>
+									<input type="radio" id="radio5" name="filter" checked>
+									<label for="radio5">상품화 배너</label>
+								</span>
+								<span>
+									<input type="radio" id="radio6" name="filter">
+									<label for="radio6">고정 배너</label>
+								</span>
+								<span>
+									<input type="radio" id="radio7" name="filter">
+									<label for="radio7">상품화 및 고정 배너</label>
+								</span>
+								<span>
+									<input type="radio" id="radio8" name="filter">
+									<label for="radio8">상품화배너 (업로드)</label>
+								</span>
+								<span>
+									<input type="radio" id="radio9" name="filter">
+									<label for="radio9">상품화 + 고정배너</label>
+								</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="box_content">
+					<h2>광고 미송출시 설정</h2>
+					<ul class="form_wrap">
+						<li>
+							<div class="title">최후의 순간
+								<div class="info">
+									<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+									<ul class="info_box">
+										<li>내용 넣어주세요</li>
+									</ul>
+								</div>
+							</div>
+							<div class="radio_wrap">
+								<span>
+									<input type="radio" id="radio10" name="last" checked>
+									<label for="radio10">대체 이미지</label>
+								</span>
+								<span>
+									<input type="radio" id="radio11" name="last">
+									<label for="radio11">하우스 배너</label>
+								</span>
+								<span>
+									<input type="radio" id="radio12" name="last">
+									<label for="radio12">JSON DATA</label>
+								</span>
+								<span>
+									<input type="radio" id="radio13" name="last">
+									<label for="radio13">PASSBACK</label>
+								</span>
+								<span>
+									<input type="radio" id="radio14" name="last">
+									<label for="radio14">ETC</label>
+								</span>
+								<span>
+									<input type="radio" id="radio15" name="last">
+									<label for="radio15">없음</label>
+								</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="box_content">
+					<h2>클릭 프리쿼시</h2>
+					<ul class="form_wrap">
+						<li>
+							<div class="title">시간
+								<div class="info">
+									<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+									<ul class="info_box">
+										<li>내용 넣어주세요</li>
+									</ul>
+								</div>
+							</div>
+							<div>
+								<select>
+									<option hidden>선택하세요</option>
+									<option value="">선택하세요1</option>
+									<option value="">선택하세요2</option>
+								</select>
+							</div>
+						</li>
+						<li>
+							<div class="title">클릭 인정 구간
+								<div class="info">
+									<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+									<ul class="info_box">
+										<li>내용 넣어주세요</li>
+									</ul>
+								</div>
+							</div>
+							<div>
+								<select>
+									<option hidden>선택하세요</option>
+									<option value="">선택하세요1</option>
+									<option value="">선택하세요2</option>
+								</select>
+							</div>
+						</li>
+						<li>
+							<div class="title">IP 유효 클릭 최대 횟수
+								<div class="info">
+									<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+									<ul class="info_box">
+										<li>내용 넣어주세요</li>
+									</ul>
+								</div>
+							</div>
+							<div>
+								<select>
+									<option hidden>선택하세요</option>
+									<option value="">선택하세요1</option>
+									<option value="">선택하세요2</option>
+								</select>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="box_content">
+					<h2>과금</h2>
+					<ul class="form_wrap">
+						<li>
+							<div class="title">투텝스 사용 여부</div>
+							<div class="radio_wrap">
+								<span>
+									<input type="radio" id="radio16" name="use" checked>
+									<label for="radio16">사용</label>
+								</span>
+								<span>
+									<input type="radio" id="radio17" name="use">
+									<label for="radio17">미사용</label>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="title">과금 로직
+								<div class="info">
+									<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+									<ul class="info_box">
+										<li>내용 넣어주세요</li>
+									</ul>
+								</div>
+							</div>
+							<div>
+								<select>
+									<option hidden>선택하세요</option>
+									<option value="">선택하세요1</option>
+									<option value="">선택하세요2</option>
+								</select>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="box_content">
+					<h2>지면 통계 노출율</h2>
+					<ul class="form_wrap">
+						<li>
+							<div class="title">통계 노출율
+								<div class="info">
+									<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+									<ul class="info_box">
+										<li>내용 넣어주세요</li>
+									</ul>
+								</div>
+							</div>
+							<div>
+								<select>
+									<option hidden>선택하세요</option>
+									<option value="">선택하세요1</option>
+									<option value="">선택하세요2</option>
+								</select>
+								<span class="red">설정한 순간 기준으로 통계데이터가 변화합니다.</span>
+							</div>
+						</li>
+						<li>
+							<div class="title">통계 클릭률
+								<div class="info">
+									<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+									<ul class="info_box">
+										<li>내용 넣어주세요</li>
+									</ul>
+								</div>
+							</div>
+							<div>
+								<select>
+									<option hidden>선택하세요</option>
+									<option value="">선택하세요1</option>
+									<option value="">선택하세요2</option>
+								</select>
+								<span class="red">설정한 순간 기준으로 통계데이터가 변화합니다.</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="btn_wrap">
+					<button type="button" class="gray_btn">초기화</button>
+					<button type="button" class="blue_btn">저장</button>
+					<button type="button" class="gray_btn">취소</button>
+				</div>
+				<footer>
+					<ul>
+						<li>(주)인라이플 ｜ 113-86-60934 ｜ 한경훈,이근옥 ｜ 서울특별시 구로구 구로동 디지털로 272 한신아이티타워 501호~504호</li>
+						<li>TEL .<a href="tel:+8207077052093">070-7705-2093(948)</a> ｜ FAX .02-865-6845 ｜ E-mail : <a
+								href="mailto:mobsense@enliple.com">mobsense@enliple.com</a></li>
+					</ul>
+					<p>Copyright ⓒ MOBON All rights reserved.</p>
+				</footer>
+				<!-- footer -->
+			</section><!-- section -->
+		</div><!-- wrapper -->
+	</div><!-- wrap -->
+	<script src="../js/common.js"></script>
+	<script src="../js/registration.js"></script>
+</body>
+
+</html>

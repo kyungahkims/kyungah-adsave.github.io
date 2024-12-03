@@ -67,18 +67,15 @@ $('.aside_btn').click(onBarClick);
 
 /* 날짜 선택 라이브러리 */
 $('#dateInput').daterangepicker({
-	opens: 'right',
 	startDate: moment().subtract(6, 'days'),
 	endDate: moment(),
 	alwaysShowCalendars: true,
 	showCustomRangeLabel: false,
+	autoApply: true,
 	locale: {
 		format: 'YYYY-MM-DD',
-		applyLabel: '적용',
-		cancelLabel: '취소',
 		daysOfWeek: ['일', '월', '화', '수', '목', '금', '토'],
 		monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-		firstDay: 0
 	},
 	ranges: {
 		'오늘': [moment(), moment()],
