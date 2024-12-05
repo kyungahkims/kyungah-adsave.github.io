@@ -17,6 +17,12 @@ $('.user_nav a').click(function () {
 });
 
 /* aside 메뉴 바 */
+$(document).ready(function () {
+	$('.subs.active2').each(function () {
+		$(this).stop().slideDown('300');
+	});
+});
+
 $('.navi').click(function () {
 	$(this).stop().addClass('active');
 	$(this).next('.subs').stop().slideToggle('300').addClass('active2');

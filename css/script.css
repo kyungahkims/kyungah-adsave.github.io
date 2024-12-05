@@ -1,0 +1,58 @@
+.content {
+  /* copy_wrap */
+}
+.content h2 {
+  font-size: 18px;
+  font-weight: 500;
+  border-bottom: 1px solid #e3e3e3;
+  padding-bottom: 20px;
+}
+.content .box_content {
+  min-height: 370px;
+  padding-bottom: 35px;
+}
+.content .contract_information > li:not(:first-child) {
+  margin-top: 18px;
+}
+.content .contract_information > li textarea {
+  width: 100%;
+  height: 80px;
+  font-size: 16px;
+  text-align: center;
+  padding: 23px 15px;
+  margin-top: 7px;
+}
+.content .contract_information > li .btn_wrap {
+  margin: 10px auto 0;
+}
+.content .copy_wrap {
+  position: fixed;
+  left: 50%;
+  bottom: 16px;
+  z-index: 999;
+}
+.content .copy_alert {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 8px;
+  background-color: #fff;
+  -webkit-box-shadow: 1px 4px 8px rgba(209, 209, 209, 0.808);
+          box-shadow: 1px 4px 8px rgba(209, 209, 209, 0.808);
+  padding: 20px;
+}
+.content .copy_alert::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: url("../img/checkbox-on.svg") no-repeat center;
+  margin-right: 8px;
+}/*# sourceMappingURL=script.css.map */

@@ -1,0 +1,33 @@
+.content {
+  /* manage */
+}
+.content .manage {
+  display: inline-block;
+}
+.content .manage:not(:last-child) {
+  margin-right: 5px;
+}
+.content .manage::before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  display: block;
+}
+.content .manage.on:before {
+  background: url("../img/icon-on.svg") no-repeat center;
+}
+.content .manage.memo:before {
+  background: url("../img/icon-memo.svg") no-repeat center;
+}
+.content .manage.modify:before {
+  background: url("../img/icon-modify.svg") no-repeat center;
+}
+.content .manage.setting:before {
+  background: url("../img/icon-setting.svg") no-repeat center;
+}
+.content .manage.report:before {
+  background: url("../img/icon-report.svg") no-repeat center;
+}
+.content .manage.hashtag:before {
+  background: url("../img/icon-hashtag.svg") no-repeat center;
+}/*# sourceMappingURL=manage.css.map */

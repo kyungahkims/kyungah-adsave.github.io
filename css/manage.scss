@@ -1,0 +1,42 @@
+.content {
+
+	/* manage */
+	.manage {
+		display: inline-block;
+
+		&:not(:last-child) {
+			margin-right: 5px;
+		}
+
+		&::before {
+			content: "";
+			width: 25px;
+			height: 25px;
+			display: block;
+		}
+
+		&.on:before {
+			background: url('../img/icon-on.svg') no-repeat center;
+		}
+
+		&.memo:before {
+			background: url('../img/icon-memo.svg') no-repeat center;
+		}
+
+		&.modify:before {
+			background: url('../img/icon-modify.svg') no-repeat center;
+		}
+
+		&.setting:before {
+			background: url('../img/icon-setting.svg') no-repeat center;
+		}
+
+		&.report:before {
+			background: url('../img/icon-report.svg') no-repeat center;
+		}
+
+		&.hashtag:before {
+			background: url('../img/icon-hashtag.svg') no-repeat center;
+		}
+	}
+}

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+    <g transform="translate(-414 -374)">
+        <rect data-name="사각형 973" width="25" height="25" rx="4" transform="translate(414 374)" style="fill:#17a2ff"/>
+        <g data-name="그룹 7651">
+            <path data-name="합치기 35" d="M1.093 13.343a1.039 1.039 0 0 1-.771-.328A1.076 1.076 0 0 1 0 12.229V1.113A1.077 1.077 0 0 1 .321.327 1.039 1.039 0 0 1 1.093 0h10.923a1.035 1.035 0 0 1 .771.327 1.077 1.077 0 0 1 .322.786v7.319a1.071 1.071 0 0 1-.092.438 1.2 1.2 0 0 1-.236.358l-3.714 3.78a1.207 1.207 0 0 1-.352.241 1.048 1.048 0 0 1-.431.092zm7.438-4.658a.539.539 0 0 0-.155.394v3.151l3.64-3.706H8.92a.523.523 0 0 0-.389.161zm1.887-4.94a.561.561 0 0 0-.212-.039H2.9a.548.548 0 0 0-.206.039z" transform="translate(419.999 380)" style="fill:#fff"/>
+            <rect data-name="사각형 6287" width="9" height="2" rx="1" transform="translate(422 383)" style="fill:#17a2ff"/>
+            <rect data-name="사각형 6288" width="7" height="2" rx="1" transform="translate(422 386.018)" style="fill:#17a2ff"/>
+        </g>
+    </g>
+</svg>

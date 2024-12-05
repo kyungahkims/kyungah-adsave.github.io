@@ -1,0 +1,63 @@
+.content {
+	h2 {
+		font-size: 18px;
+		font-weight: 500;
+		border-bottom: 1px solid #e3e3e3;
+		padding-bottom: 20px;
+	}
+
+	.box_content {
+		min-height: 370px;
+		padding-bottom: 35px;
+	}
+
+	.contract_information {
+		&>li {
+
+			&:not(:first-child) {
+				margin-top: 18px;
+			}
+
+			textarea {
+				width: 100%;
+				height: 80px;
+				font-size: 16px;
+				text-align: center;
+				padding: 23px 15px;
+				margin-top: 7px;
+			}
+
+			.btn_wrap {
+				margin: 10px auto 0;
+			}
+		}
+	}
+
+	/* copy_wrap */
+	.copy_wrap {
+		position: fixed;
+		left: calc(100% - 50%);
+		bottom: 16px;
+		z-index: 999;
+	}
+
+	.copy_alert {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 15px;
+		font-weight: bold;
+		border-radius: 8px;
+		background-color: #fff;
+		box-shadow: 1px 4px 8px rgba(209, 209, 209, 0.808);
+		padding: 20px;
+
+		&::before {
+			content: "";
+			width: 16px;
+			height: 16px;
+			background: url('../img/checkbox-on.svg') no-repeat center;
+			margin-right: 8px;
+		}
+	}
+}

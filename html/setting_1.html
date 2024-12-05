@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../css/common.css">
-	<link rel="stylesheet" href="../css/summary.css">
+	<link rel="stylesheet" href="../css/setting.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css">
 	<link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
 	<link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
@@ -49,7 +49,7 @@
 				</div>
 				<nav aria-label="주 메뉴">
 					<ul class="navi_wrap">
-						<li class="navi summary active"><a href="#"><span>개요</span></a></li>
+						<li class="navi summary"><a href="#"><span>개요</span></a></li>
 						<li class="navi analysis"><a href="#"><span>분석 센터</span></a></li>
 						<li class="navi script navi_sub"><span>스크립트</span></li>
 						<li class="subs">
@@ -58,7 +58,7 @@
 								<li><a href="#">스크립트 가이드</a></li>
 							</ul>
 						</li>
-						<li class="navi setting"><a href="#"><span>지면 등록</span></a></li>
+						<li class="navi setting active"><a href="#"><span>지면 등록</span></a></li>
 						<li class="navi manage"><a href="#"><span>지면 관리</span></a></li>
 						<li class="navi report navi_sub"><span>보고서</span></li>
 						<li class="subs">
@@ -72,83 +72,68 @@
 				</nav>
 			</aside><!-- aside -->
 			<section class="content">
-				<h1>애드세이브 > 개요</h1>
+				<h1>애드세이브 > 지면 등록</h1>
 				<div class="box_content">
-					<div class="search_wrap">
-						<div class="calendar">
-							<div class="input_wrap">
-								<input type="text" id="dateInput" value="">
+					<h2>광고 노출 형태</h2>
+					<div class="banner">
+						<div class="native_link">
+							<div class="link_cont">
+								<div>
+									<h3>네이티브 광고</h3>
+									<p>컨텐츠와 융화된 형태로 자연스럽게<br>
+										노출하는 사용자 친화적 광고 노출 형태</p>
+								</div>
 							</div>
+							<a href="./setting_2.html">네이티브 광고</a>
 						</div>
-						<div class="radio_wrap">
-							<span>
-								<input type="radio" id="radio1" name="date" checked>
-								<label for="radio1">최근 7일</label>
-							</span>
-							<span>
-								<input type="radio" id="radio2" name="date">
-								<label for="radio2">최근 14일</label>
-							</span>
-							<span>
-								<input type="radio" id="radio3" name="date">
-								<label for="radio3">최근 30일</label>
-							</span>
-							<span>
-								<input type="radio" id="radio4" name="date">
-								<label for="radio4">이번달</label>
-							</span>
+						<div class="content_link">
+							<div class="link_cont">
+								<div>
+									<h3>컨텐츠 연동</h3>
+									<p>매체 컨텐츠 or 기사와 결합하여<br>
+										제공하는 노출 형태</p>
+								</div>
+							</div>
+							<a href="#">컨텐츠 연동</a>
 						</div>
-						<button type="button" class="search_btn" aria-label="검색버튼">검색</button>
 					</div>
 					<div class="box_wrap">
-						<article class="box">
-							<div>
-								<h3>Total Pageviews</h3>
-								<strong class="blue">1,100,000</strong>
-							</div>
-						</article>
-						<article class="box">
-							<div>
-								<h3>Adblock Pageviews</h3>
-								<strong class="blue">1,100,000</strong>
-							</div>
-						</article>
-						<article class="box">
-							<div>
-								<h3>Adblock Ratio</h3>
-								<strong>9.1%</strong>
-							</div>
-						</article>
-						<article class="box">
-							<div>
-								<h3>수익금</h3>
-								<strong class="red">￦20,000</strong>
-							</div>
-						</article>
-					</div>
-					<div class="box_wrap mt20">
-						<article class="box2 big">
-							<h3>총 페이지뷰<strong class="blue">1,100,000</strong></h3>
-						</article>
-						<article class="box2 big">
-							<h3>Adblock 페이지뷰<strong class="blue">1,100,000</strong></h3>
-						</article>
-						<article class="box2">
-							<h3 class="mt">Adblock Ratio</h3>
-						</article>
-					</div>
-				</div>
-				<div class="box_content">
-					<div class="box_wrap">
-						<article class="box2">
-							<h3>CPM<strong class="green">￦140</strong></h3>
-						</article>
-						<article class="box2">
-							<h3>수익금<strong class="red">￦20,000</strong></h3>
-						</article>
-						<article class="box2">
-							<h3>Page RPM<strong>￦500</strong></h3>
-						</article>
+						<div class="box">
+							<div><img src="../img/img-contents-box.png" alt="지면광고샘플이미지"></div>
+							<strong>Contents Box</strong>
+							<p>추천된 기사를 중심으로 알고리즘을 통해 기사와 AD를<br>
+								결합하여 제공하는 Frame형태 서비스입니다.</p>
+						</div>
+						<div class="box">
+							<div><img src="../img/img-home-pick.png" alt="지면광고샘플이미지"></div>
+							<strong>Home Pick</strong>
+							<p>수집된 기사와 광고를 결합한 형태로 제공하는<br>
+								Contents curation 서비스입니다.</p>
+						</div>
+						<div class="box">
+							<div><img src="../img/img-infinity-feed.png" alt="지면광고샘플이미지"></div>
+							<strong>Infinity Feed</strong>
+							<p>기사 최하단 영역에서 추천된 기사와 광고를 융합하여<br>
+								Feed 형태로 무한히 제공하는 서비스입니다.</p>
+						</div>
+						<div class="box">
+							<div><img src="../img/img-breaking-news.png" alt="지면광고샘플이미지"></div>
+							<strong>Breaking News</strong>
+							<p>최신 기사와 광고를 결합하여 화면 하단 floating bar<br>
+								형태로 제공하는 뉴스 속보 서비스입니다.</p>
+						</div>
+						<div class="box">
+							<div><img src="../img/img-react-floating.png" alt="지면광고샘플이미지"></div>
+							<strong>React Floating</strong>
+							<p>유저 행동 반응 감지형 노출로 높은 CTR을 기반으로<br>
+								유저 PV 상승 및 광고 수익에 최적화 된 서비스입니다.</p>
+						</div>
+						<div class="box">
+							<div><img src="../img/img-changing-ad.png" alt="지면광고샘플이미지"></div>
+							<strong>Changing AD</strong>
+							<p>지정영역에서 광고 노출 후 바이라인 하단 영역<br>
+								도달 시 추천 기사가 노출되는 서비스입니다.</p>
+						</div>
 					</div>
 				</div>
 				<footer>
@@ -163,6 +148,7 @@
 		</div><!-- wrapper -->
 	</div><!-- wrap -->
 	<script src="../js/common.js"></script>
+	<script src="../js/setting.js"></script>
 </body>
 
 </html>
