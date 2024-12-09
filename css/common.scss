@@ -987,7 +987,7 @@ aside {
 		overflow: auto;
 
 		.table {
-			width: 100%;
+			min-width: 100%;
 			font-size: 13px;
 			font-weight: 500;
 
@@ -1019,6 +1019,10 @@ aside {
 
 		.dataTables_wrapper.no-footer .dataTables_scrollBody {
 			border-bottom: none !important;
+		}
+
+		.dataTables_scrollHeadInner {
+			width: 100% !important;
 		}
 	}
 }
