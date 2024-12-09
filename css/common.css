@@ -632,6 +632,7 @@ aside.active nav .navi_wrap .subs ul li:not(:last-child) {
   width: 100%;
   max-width: 100%;
   padding: 25px 30px 30px 30px;
+  overflow: hidden;
   /* form_wrap */
   /* btn_wrap */
   /* table_menu_wrap */
@@ -768,12 +769,12 @@ aside.active nav .navi_wrap .subs ul li:not(:last-child) {
   color: #222;
   border-radius: 3px;
   border: 1px solid #cbcbcb;
-  background-color: #fff;
   padding-left: 10px;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   background: url(../img/icon-select-arrow.svg) calc(100% - 14px) no-repeat;
+  background-color: #fff;
   margin-right: 10px;
 }
 .content .form_wrap > li textarea {
@@ -810,9 +811,6 @@ aside.active nav .navi_wrap .subs ul li:not(:last-child) {
   color: #222;
   border: 1px solid #ececec;
   background-color: #f9f9f9;
-}
-.content .form_wrap > li .calendar {
-  margin-right: 10px;
 }
 .content .form_wrap > li .calendar .input_wrap input {
   width: 200px;
@@ -1028,21 +1026,17 @@ aside.active nav .navi_wrap .subs ul li:not(:last-child) {
   overflow: auto;
 }
 .content .table_wrap .table {
-  width: calc(100% - 7px);
+  width: 100%;
   font-size: 13px;
   font-weight: 500;
 }
-.content .table_wrap .table.dataTable.no-footer {
-  border: none !important;
-}
 .content .table_wrap .table thead th {
-  position: sticky !important;
+  position: sticky;
   top: 0;
   z-index: 900;
   white-space: nowrap;
   text-align: center;
-  padding: 10px !important;
-  border: none !important;
+  border: none;
   background-color: #f5f5f5;
 }
 .content .table_wrap .table tbody td {
@@ -1053,6 +1047,9 @@ aside.active nav .navi_wrap .subs ul li:not(:last-child) {
 .content .table_wrap .table-hover tbody tr:hover {
   background-color: #f8f8f8;
   cursor: pointer;
+}
+.content .table_wrap .dataTables_wrapper.no-footer .dataTables_scrollBody {
+  border-bottom: none !important;
 }
 
 /* footer */
@@ -1107,7 +1104,8 @@ footer p {
   width: 240px;
   border-radius: 3px;
   border: 1px solid #17a2ff;
-  margin-right: 30px;
+  margin-right: 10px;
+  overflow: hidden;
 }
 .calendar::before {
   content: "";
@@ -1125,7 +1123,6 @@ footer p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100%;
 }
 .calendar .input_wrap input {
   width: 200px;

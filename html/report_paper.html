@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../css/common.css">
-	<link rel="stylesheet" href="../css/manage.css">
+	<link rel="stylesheet" href="../css/report.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css">
 	<link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
 	<!-- datatable 1 -->
@@ -67,12 +67,12 @@
 							</ul>
 						</li>
 						<li class="navi setting"><a href="#"><span>지면 등록</span></a></li>
-						<li class="navi manage active"><a href="#"><span>지면 관리</span></a></li>
-						<li class="navi report navi_sub"><span>보고서</span></li>
-						<li class="subs">
+						<li class="navi manage"><a href="#"><span>지면 관리</span></a></li>
+						<li class="navi report navi_sub active"><span>보고서</span></li>
+						<li class="subs active2">
 							<ul>
 								<li><a href="#">일자별 수익금 보고서</a></li>
-								<li><a href="#">지면별 수익금 보고서</a></li>
+								<li class="active3"><a href="#">지면별 수익금 보고서</a></li>
 							</ul>
 						</li>
 						<li class="navi notice"><a href="#"><span>공지사항</span></a></li>
@@ -80,34 +80,68 @@
 				</nav>
 			</aside><!-- aside -->
 			<section class="content">
-				<h1>애드세이브 > 지면 관리</h1>
+				<h1>애드세이브 > 지면별 수익금 보고서</h1>
+				<ul class="table_menu_wrap">
+					<li>
+						<div class="radio_wrap">
+							<div class="state_r">게재 상태</div>
+							<span>
+								<input type="radio" id="radio1" name="state" checked>
+								<label for="radio1">전체</label>
+							</span>
+							<span>
+								<input type="radio" id="radio2" name="state">
+								<label for="radio2">온라인</label>
+							</span>
+							<span>
+								<input type="radio" id="radio3" name="state">
+								<label for="radio3">모바일</label>
+							</span>
+						</div>
+					</li>
+					<li>
+						<div class="calendar">
+							<div class="input_wrap">
+								<input type="text" id="dateInput" value="">
+							</div>
+						</div>
+						<button type="button" class="search_btn" aria-label="검색버튼">검색</button>
+					</li>
+					<li><button type="button">종합</button>
+						<div class="select_name">네이티브 광고</div>
+						<select>
+							<option hidden>선택하세요.</option>
+							<option value="">전체</option>
+							<option value="">투데이카트매칭</option>
+							<option value="">위클리카트매칭</option>
+							<option value="">먼슬리카트매칭</option>
+							<option value="">카트매칭</option>
+							<option value="">먼슬리보완재매칭</option>
+							<option value="">관심상품매칭</option>
+							<option value="">본상품매칭</option>
+							<option value="">헤비유저매칭</option>
+							<option value="">리턴매칭</option>
+							<option value="">문맥매칭</option>
+							<option value="">검색어매칭</option>
+							<option value="">가망고객매칭</option>
+							<option value="">성향매칭</option>
+							<option value="">오디언스매칭</option>
+							<option value="">유입키워드</option>
+							<option value="">핵심키워드</option>
+							<option value="">카테고리매칭</option>
+							<option value="">베이스광고</option>
+						</select>
+					</li>
+					<li>
+						<div class="select_name">지면 선택</div>
+						<select>
+							<option hidden>선택하세요.</option>
+							<option value="">[중지]테스트</option>
+						</select>
+					</li>
+				</ul><!-- table_menu_wrap -->
 				<div class="box_content">
 					<ul class="table_menu_wrap">
-						<li>
-							<button type="button">게재</button>
-							<button type="button">중지</button>
-							<button type="button">광고승인 및 가중치 일괄처리</button>
-							<button type="button">가중치 자동화 적용</button>
-							<button type="button">가중치 자동화 미적용</button>
-							<button type="button">지면 복사</button>
-						</li>
-						<li>
-							<div class="radio_wrap">
-								<div class="state_r">게재 상태</div>
-								<span>
-									<input type="radio" id="radio1" name="state" checked>
-									<label for="radio1">전체</label>
-								</span>
-								<span>
-									<input type="radio" id="radio2" name="state">
-									<label for="radio2">게재중</label>
-								</span>
-								<span>
-									<input type="radio" id="radio3" name="state">
-									<label for="radio3">중지중</label>
-								</span>
-							</div>
-						</li>
 						<li class="length_wrap">
 							<div class="length_group">
 								<div class="select_box_wrap"><button type="button">컬럼 설정</button>
@@ -116,62 +150,66 @@
 										<li class="active">요청수</li>
 										<li class="active">구좌노출수</li>
 										<li class="active">클릭수</li>
+										<li class="active">클릭률</li>
 										<li class="active">수익금</li>
-										<li class="active">소진금액</li>
 										<li class="active">소진금액</li>
 										<li class="active">평균지출</li>
 										<li class="active">전환수</li>
-										<li class="active">전환률</li>
-										<li class="active">전환단가</li>
+										<li class="active">전환율</li>
+										<li>전환단가</li>
 										<li>평균구매액</li>
 										<li>실시간매출</li>
 										<li>실시간ROAS</li>
-										<li class="active">직접매출</li>
-										<li class="active">직ROAS</li>
+										<li>직접매출</li>
+										<li>직ROAS</li>
 										<li>총매출</li>
-										<li class="active">ECPM</li>
+										<li>ECPM</li>
 										<li>VECPM</li>
 									</ul>
 								</div>
-								<!-- <button type="button">복사</button> --><input type="text" placeholder="검색어를 입력하세요."><button type="button">검색</button>
+								<!-- <button type="button">복사</button> --><input type="text" placeholder="검색어를 입력하세요."><button
+									type="button">검색</button>
 							</div>
 						</li><!-- length-wrap -->
-					</ul>
+					</ul><!-- table_menu_wrap -->
 					<div class="table_wrap">
 						<table id="table" class="table">
 							<thead>
 								<tr>
-									<th data-orderable="false"><input type="checkbox" id="checkbox"><label for="checkbox"></label></th>
-									<th data-orderable="false">관리</th>
-									<th>게재여부</th>
-									<th>승인상태</th>
-									<th>노출형태</th>
-									<th>지면사이즈</th>
-									<th>지면명</th>
-									<th>지면고유번호</th>
+									<th>지면</th>
+									<th>요청수</th>
 									<th>구좌노출수</th>
+									<th>유효노출수</th>
+									<th>스크롤수</th>
 									<th>클릭수</th>
 									<th>클릭률</th>
+									<th>유효클릭률</th>
+									<th>기사노출수</th>
+									<th>기사클릭수</th>
+									<th>기사클릭률</th>
+									<th>수익금</th>
+									<th>소진금액</th>
+									<th>평균지출</th>
+									<th>전환수</th>
+									<th>전환율</th>
 								</tr>
 							</thead>
 							<!-- <tbody>
 								<tr>
-									<td><input type="checkbox" id="checkbox"><label for="checkbox"></label></td>
-									<td><div class="manage_wrap"><a href="#" title="ON" class="manage on"></a><a href="#" title="메모" class="manage memo"></a><a href="#" title="수정" class="manage modify"></a><a href="#" title="설정" class="manage setting"></a><a href="#" title="리포트" class="manage report"></a><a href="#" title="해시태그" class="manage hashtag"></a><a href="#" title="노출설정" class="manage exposure"></a></div></td>
-									<td>게재</td>
-									<td>완료</td>
-									<td>아이커버(i)</td>
-									<td>이미지없음</td>
-									<td>경향신문_기사내_중앙플로팅</td>
-									<td>156478</td>
-									<td><span class="blue">175,168</span></td>
-									<td>175,168</td>
-									<td><span class="blue">100%</span></td>
+									<td>12-09</td>
+									<td><span class="blue">1,112,123</span></td>
+									<td><span class="blue">550,956</span></td>
+									<td>318</td>
+									<td><span class="blue">0.06%</span></td>
+									<td><span class="red">242,145</span></td>
+									<td>456</td>
+									<td>12</td>
+									<td>7.12</td>
 								</tr>
 							</tbody> -->
 						</table>
-					</div>
-				</div>
+					</div><!-- table_wrap -->
+				</div><!-- box_content -->
 				<footer>
 					<ul>
 						<li>(주)인라이플 ｜ 113-86-60934 ｜ 한경훈,이근옥 ｜ 서울특별시 구로구 구로동 디지털로 272 한신아이티타워 501호~504호</li>
@@ -184,7 +222,7 @@
 		</div><!-- wrapper -->
 	</div><!-- wrap -->
 	<script src="../js/common.js"></script>
-	<script src="../js/manage.js"></script>
+	<script src="../js/report_paper.js"></script>
 </body>
 
 </html>

@@ -2,67 +2,88 @@
 $(document).ready(function () {
 	const table = $("#table").DataTable({
 		ajax: {
-			url: "../json/paiement.json"
+			url: "../json/paper.json"
 		},
 		columns: [{
-				data: 'checkbox',
-				width: "20px",
-				/* 체크박스 */
-				"render": function (data, type, row) {
-					return `<input type="checkbox" id="checkbox${data}"><label for="checkbox${data}"></label>`
-				}
+				data: 'paper',
+				width: "700px",
 			},
 			{
-				data: "manage",
-				width: "250px",
+				data: "request",
+				width: "100px",
 				'render': function (data) {
-					/* 아이콘 1~6 */
-					return `<div class="manage_wrap"><a href="#" title="ON" class="manage on"></a><a href="#" title="메모" class="manage memo"></a><a href="#" title="수정" class="manage modify"></a><a href="#" title="설정" class="manage setting"></a><a href="#" title="리포트" class="manage report"></a><a href="#" title="해시태그" class="manage hashtag"></a><a href="#" title="노출설정" class="manage exposure"></a></div>`;
+					/* 폰트 색상 블루 */
+					return `<span class="blue">${data}</span>`;
 				}
-			},
-			{
-				data: "publication",
-				width: "60px",
-			},
-			{
-				data: "status",
-				width: "60px",
-			},
-			{
-				data: "type",
-				width: "100px",
-			},
-			{
-				data: "size",
-				width: "100px",
-			},
-			{
-				data: "name",
-				width: "250px",
-			},
-			{
-				data: "number",
-				width: "80px",
 			},
 			{
 				data: "account",
-				width: "80px",
+				width: "100px",
 				'render': function (data) {
 					/* 폰트 색상 블루 */
 					return `<span class="blue">${data}</span>`;
 				}
+			},
+			{
+				data: "available",
+				width: "100px",
+			},
+			{
+				data: "scroll",
+				width: "100px",
 			},
 			{
 				data: "click",
-				width: "80px",
+				width: "100px",
 			},
 			{
 				data: "rates",
-				width: "80px",
+				width: "100px",
 				'render': function (data) {
 					/* 폰트 색상 블루 */
 					return `<span class="blue">${data}</span>`;
 				}
+			},
+			{
+				data: "averageclick",
+				width: "100px",
+			},
+			{
+				data: "exposure",
+				width: "100px",
+			},
+			{
+				data: "clicknumber",
+				width: "100px",
+			},
+			{
+				data: "clickrate",
+				width: "100px",
+			},
+			{
+				data: "profits",
+				width: "150px",
+				'render': function (data) {
+					/* 폰트 색상 레드 */
+					return `<span class="red">${data}</span>`;
+				}
+			},
+			{
+				data: "exhaustion",
+				width: "150px",
+			},
+			{
+				data: "average",
+				width: "100px",
+			},
+			{
+				data: "change",
+				width: "100px",
+
+			},
+			{
+				data: "rate",
+				width: "100px",
 			}
 		],
 		"language": {
@@ -82,7 +103,7 @@ $(document).ready(function () {
 		scrollY: '750px',
 		info: false,
 		order: [
-			[8, "desc"]
+			[12, "desc"]
 		],
 		"retrieve": true
 	});
@@ -99,7 +120,7 @@ $(document).ready(function () {
 			{
 				extend: 'excelHtml5',
 				text: '엑셀',
-				filename: '지면관리',
+				filename: '지면별 수익금 보고서',
 				footer: true,
 				bom: true,
 				className: 'btnexcel',

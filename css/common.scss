@@ -617,6 +617,7 @@ aside {
 	width: 100%;
 	max-width: 100%;
 	padding: 25px 30px 30px 30px;
+	overflow: hidden;
 
 	h1 {
 		font-size: 20px;
@@ -737,10 +738,10 @@ aside {
 				color: #222;
 				border-radius: 3px;
 				border: 1px solid #cbcbcb;
-				background-color: #fff;
 				padding-left: 10px;
 				appearance: none;
 				background: url(../img/icon-select-arrow.svg) calc(100% - 14px) no-repeat;
+				background-color: #fff;
 				margin-right: 10px;
 			}
 
@@ -767,7 +768,6 @@ aside {
 			}
 
 			.calendar {
-				margin-right: 10px;
 
 				.input_wrap {
 					input {
@@ -987,23 +987,18 @@ aside {
 		overflow: auto;
 
 		.table {
-			width: calc(100% - 7px);
+			width: 100%;
 			font-size: 13px;
 			font-weight: 500;
 
-			&.dataTable.no-footer {
-				border: none !important;
-			}
-
 			thead {
 				th {
-					position: sticky !important;
+					position: sticky;
 					top: 0;
 					z-index: 900;
 					white-space: nowrap;
 					text-align: center;
-					padding: 10px !important;
-					border: none !important;
+					border: none;
 					background-color: #f5f5f5;
 				}
 			}
@@ -1020,6 +1015,10 @@ aside {
 		.table-hover tbody tr:hover {
 			background-color: #f8f8f8;
 			cursor: pointer;
+		}
+
+		.dataTables_wrapper.no-footer .dataTables_scrollBody {
+			border-bottom: none !important;
 		}
 	}
 }
@@ -1073,7 +1072,8 @@ footer {
 	width: 240px;
 	border-radius: 3px;
 	border: 1px solid #17a2ff;
-	margin-right: 30px;
+	margin-right: 10px;
+	overflow: hidden;
 
 	&::before {
 		content: "";
@@ -1088,7 +1088,6 @@ footer {
 	.input_wrap {
 		display: flex;
 		justify-content: center;
-		width: 100%;
 
 		input {
 			width: 200px;

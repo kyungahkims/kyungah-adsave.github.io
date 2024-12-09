@@ -1,6 +1,9 @@
 .content {
   /* manage */
 }
+.content .manage_wrap {
+  min-width: 220px;
+}
 .content .manage {
   display: inline-block;
 }
@@ -30,4 +33,7 @@
 }
 .content .manage.hashtag:before {
   background: url("../img/icon-hashtag.svg") no-repeat center;
+}
+.content .manage.exposure:before {
+  background: url("../img/icon-exposure.svg") no-repeat center;
 }/*# sourceMappingURL=manage.css.map */

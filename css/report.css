@@ -1,0 +1,81 @@
+.content h1 {
+  margin-bottom: 25px;
+}
+.content .table_menu_wrap > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.content .table_menu_wrap > li .calendar .input_wrap input {
+  width: 200px;
+  margin-right: 0;
+  border: none;
+}
+.content .table_menu_wrap > li .select_name {
+  height: 30px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  border-radius: 3px 0 0 3px;
+  background-color: #17a2ff;
+  padding: 5px 18px;
+}
+.content .table_menu_wrap > li select {
+  width: 180px;
+  height: 30px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #222;
+  border-radius: 0 3px 3px 0;
+  border: 1px solid #cbcbcb;
+  border-left: none;
+  padding-left: 10px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: url(../img/icon-select-arrow.svg) calc(100% - 14px) no-repeat;
+  background-color: #fff;
+  margin-right: 10px;
+}
+.content .tab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 2px;
+     -moz-column-gap: 2px;
+          column-gap: 2px;
+}
+.content .tab .tablinks {
+  width: 100px;
+  height: 38px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #777;
+  border-radius: 3px 3px 0 0;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  background-color: #f5f5f5;
+}
+.content .tab .tablinks.active {
+  position: relative;
+  top: 1px;
+  height: 39px;
+  color: #17a2ff;
+  border: 1px solid #17a2ff;
+  border-bottom: none;
+  background-color: #fff;
+  z-index: 2;
+}
+.content .tab_wrap {
+  border-top: 1px solid #17a2ff;
+}
+.content .tab_wrap .tabcontent {
+  height: 420px;
+  padding: 16px;
+}
+.content .table_wrap .table tbody td {
+  padding: 15px 5px !important;
+}/*# sourceMappingURL=report.css.map */
