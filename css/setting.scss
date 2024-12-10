@@ -148,8 +148,25 @@
 
 		.form_box_wrapper2 {
 			display: none;
-
 			align-items: flex-start;
+			margin-top: 40px;
+
+			.form_box_wrap {
+
+				.form_box {
+					button {
+						background-color: #ecfaff;
+
+						&.active {
+							background-color: #17a2ff;
+
+							.size {
+								color: #fff;
+							}
+						}
+					}
+				}
+			}
 
 			.form_box_none {
 				display: none;
@@ -173,7 +190,6 @@
 			flex: 18%;
 			height: 140px;
 			border-radius: 3px;
-			background-color: #f9f9f9;
 			cursor: pointer;
 
 			button {
@@ -184,6 +200,7 @@
 				justify-content: end;
 				align-items: center;
 				padding-bottom: 20px;
+				background-color: #f9f9f9;
 
 				&.active {
 					background-color: #17a2ff;

@@ -154,6 +154,16 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  margin-top: 40px;
+}
+.content .form_wrap .form_box_wrapper2 .form_box_wrap .form_box button {
+  background-color: #ecfaff;
+}
+.content .form_wrap .form_box_wrapper2 .form_box_wrap .form_box button.active {
+  background-color: #17a2ff;
+}
+.content .form_wrap .form_box_wrapper2 .form_box_wrap .form_box button.active .size {
+  color: #fff;
 }
 .content .form_wrap .form_box_wrapper2 .form_box_none {
   display: none;
@@ -179,7 +189,6 @@
           flex: 18%;
   height: 140px;
   border-radius: 3px;
-  background-color: #f9f9f9;
   cursor: pointer;
 }
 .content .form_box_wrap .form_box button {
@@ -199,6 +208,7 @@
       -ms-flex-align: center;
           align-items: center;
   padding-bottom: 20px;
+  background-color: #f9f9f9;
 }
 .content .form_box_wrap .form_box button.active {
   background-color: #17a2ff;
