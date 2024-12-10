@@ -29,6 +29,5 @@ $('.form_box_wrapper1 .form_box_wrap button').click(function () {
 });
 
 $('.form_box_wrapper2 .form_box_wrap button').click(function () {
-	$('.form_box_wrapper2').find($('.form_box_wrap button')).removeClass('active');
-	$(this).addClass('active');
+	$(this).toggleClass('active');
 });
