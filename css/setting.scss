@@ -140,11 +140,33 @@
 	}
 
 	/******************** setting_2 ********************/
+	.form_wrap {
+		.form_box_wrapper1 {
+			display: flex;
+			align-items: flex-start;
+		}
+
+		.form_box_wrapper2 {
+			display: none;
+
+			align-items: flex-start;
+
+			.form_box_none {
+				display: none;
+			}
+		}
+	}
+
 	/* form_box_wrap */
 	.form_box_wrap {
+		flex: 1;
 		flex-wrap: wrap;
 		display: flex;
 		gap: 14px;
+
+		&.form_box_wrap2 {
+			display: none;
+		}
 
 		.form_box {
 			max-width: 260px;
