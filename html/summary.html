@@ -104,13 +104,13 @@
 						<article class="box">
 							<div>
 								<h3>Total Pageviews</h3>
-								<strong class="blue">1,100,000</strong>
+								<strong data-target="1100000">1,100,000</strong>
 							</div>
 						</article>
 						<article class="box">
 							<div>
 								<h3>Adblock Pageviews</h3>
-								<strong class="blue">1,100,000</strong>
+								<strong data-target="100000">100,000</strong>
 							</div>
 						</article>
 						<article class="box">
@@ -122,23 +122,52 @@
 						<article class="box">
 							<div>
 								<h3>수익금</h3>
-								<strong class="red">￦20,000</strong>
+								<strong>￦20,000</strong>
 							</div>
 						</article>
 					</div>
 					<div class="box_wrap mt20">
-						<article class="box2 big">
+						<article class="box2">
 							<h3>일평균 페이지뷰<strong class="blue">1,100,000</strong></h3>
-						</article>
-						<article class="box2 big">
-							<h3>일평균 Adblock 페이지뷰<strong class="blue">1,100,000</strong></h3>
+							<div id="chartLine01" class="graph">
+								<!-- 그래프 -->
+							</div>
 						</article>
 						<article class="box2">
-							<h3 class="mt">Adblock Ratio</h3>
+							<h3>일평균 Adblock 페이지뷰<strong class="blue">1,100,000</strong></h3>
+							<div id="chartLine02" class="graph">
+								<!-- 그래프 -->
+							</div>
+						</article>
+						<article class="box2">
+							<h3>Adblock Ratio</h3>
+							<div id="chartPie01" class="graph">
+								<!-- 그래프 -->
+							</div>
+						</article>
+					</div>
+					<div class="box_wrap mt20">
+						<article class="box2">
+							<h3>CPM<strong class="green">￦140</strong></h3>
+							<div id="chartLine03" class="graph">
+								<!-- 그래프 -->
+							</div>
+						</article>
+						<article class="box2">
+							<h3>수익금<strong class="red">￦20,000</strong></h3>
+							<div id="chartLine04" class="graph">
+								<!-- 그래프 -->
+							</div>
+						</article>
+						<article class="box2">
+							<h3>Page RPM<strong>￦500</strong></h3>
+							<div id="chartLine05" class="graph">
+								<!-- 그래프 -->
+							</div>
 						</article>
 					</div>
 				</div>
-				<div class="box_content">
+				<!-- <div class="box_content">
 					<div class="box_wrap">
 						<article class="box2">
 							<h3>CPM<strong class="green">￦140</strong></h3>
@@ -150,7 +179,7 @@
 							<h3>Page RPM<strong>￦500</strong></h3>
 						</article>
 					</div>
-				</div>
+				</div> -->
 				<footer>
 					<ul>
 						<li>(주)인라이플 ｜ 113-86-60934 ｜ 한경훈,이근옥 ｜ 서울특별시 구로구 구로동 디지털로 272 한신아이티타워 501호~504호</li>
@@ -163,6 +192,7 @@
 		</div><!-- wrapper -->
 	</div><!-- wrap -->
 	<script src="../js/common.js"></script>
+	<script src="../js/summary.js"></script>
 </body>
 
 </html>
