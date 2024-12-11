@@ -89,6 +89,7 @@ body {
 
 /* header */
 header {
+	position: relative;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -767,6 +768,12 @@ aside {
 				}
 			}
 
+			.group_wrap {
+				&>li:not(:last-child) {
+					margin-bottom: 5px;
+				}
+			}
+
 			.calendar {
 
 				.input_wrap {
@@ -782,10 +789,22 @@ aside {
 			.add_btn {
 				width: 22px;
 				height: 22px;
+				background: url('../img/btn-add.svg') no-repeat center;
 				transition: all 0.2s;
 
 				&:hover {
 					filter: brightness(1.05);
+				}
+			}
+
+			.remove_btn {
+				width: 22px;
+				height: 22px;
+				background: url('../img/btn-minus.svg') no-repeat center;
+				transition: all 0.2s;
+
+				&:hover {
+					background: url('../img/btn-disabled.svg') no-repeat center;
 				}
 			}
 
@@ -1052,7 +1071,7 @@ footer {
 .search_wrap {
 	display: flex;
 	align-items: center;
-	margin-bottom: 25px;
+	margin-bottom: 35px;
 
 	/* search_btn */
 	.search_btn {

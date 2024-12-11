@@ -93,6 +93,7 @@ body {
 
 /* header */
 header {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -812,6 +813,9 @@ aside.active nav .navi_wrap .subs ul li:not(:last-child) {
   border: 1px solid #ececec;
   background-color: #f9f9f9;
 }
+.content .form_wrap > li .group_wrap > li:not(:last-child) {
+  margin-bottom: 5px;
+}
 .content .form_wrap > li .calendar .input_wrap input {
   width: 200px;
   padding-left: 0;
@@ -821,12 +825,23 @@ aside.active nav .navi_wrap .subs ul li:not(:last-child) {
 .content .form_wrap > li .add_btn {
   width: 22px;
   height: 22px;
+  background: url("../img/btn-add.svg") no-repeat center;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 .content .form_wrap > li .add_btn:hover {
   -webkit-filter: brightness(1.05);
           filter: brightness(1.05);
+}
+.content .form_wrap > li .remove_btn {
+  width: 22px;
+  height: 22px;
+  background: url("../img/btn-minus.svg") no-repeat center;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.content .form_wrap > li .remove_btn:hover {
+  background: url("../img/btn-disabled.svg") no-repeat center;
 }
 .content .form_wrap > li .radio_wrap {
   margin-right: 0;
@@ -1079,7 +1094,7 @@ footer p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 25px;
+  margin-bottom: 35px;
   /* search_btn */
 }
 .search_wrap .search_btn {

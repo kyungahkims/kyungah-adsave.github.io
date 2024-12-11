@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
+    <g data-name="icon_adblock pageviews" transform="translate(-740 -302)">
+        <circle data-name="타원 322" cx="35" cy="35" r="35" transform="translate(740 302)" style="fill:#fff"/>
+        <g data-name="icon_adblock pageviews">
+            <g data-name="그룹 7924" transform="translate(758.875 322.626)">
+                <path data-name="빼기 5" d="M13.433 20.66H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h20.595a2 2 0 0 1 2 2v11.35a10.628 10.628 0 0 0-1.317-.082 10.258 10.258 0 0 0-9.763 6.9 1.558 1.558 0 0 0-.082.494z" transform="translate(1.07 1.142)" style="fill:#7b59cb"/>
+                <circle data-name="타원 326" cx="1.176" cy="1.176" r="1.176" transform="translate(3.506 3.473)" style="fill:#fff"/>
+                <circle data-name="타원 327" cx="1.176" cy="1.176" r="1.176" transform="translate(7.268 3.473)" style="fill:#fff"/>
+                <circle data-name="타원 328" cx="1.176" cy="1.176" r="1.176" transform="translate(11.031 3.473)" style="fill:#fff"/>
+                <g data-name="그룹 7922" style="opacity:.6">
+                    <path data-name="패스 12903" d="M9.376 11.626a2.251 2.251 0 1 0-2.251-2.25 2.251 2.251 0 0 0 2.251 2.25z" transform="translate(15.798 13.411)" style="fill:#7b59cb"/>
+                    <path data-name="패스 12904" d="M1.044 8.743a8.443 8.443 0 0 1 16.019-.005 1.325 1.325 0 0 1 0 .835 8.443 8.443 0 0 1-16.018.005 1.322 1.322 0 0 1 0-.835zm11.948.415a3.939 3.939 0 1 1-3.938-3.939 3.939 3.939 0 0 1 3.938 3.939z" transform="translate(16.12 13.628)" style="fill-rule:evenodd;fill:#7b59cb"/>
+                </g>
+                <path data-name="선 563" style="stroke:#fff;fill:none;stroke-linecap:round;stroke-width:2.5px" d="M0 21.369 26.694 0"/>
+                <path data-name="선 564" transform="translate(.709 1.417)" style="stroke:#7b59cb;fill:none;stroke-linecap:round;stroke-width:2.5px" d="M0 21.369 26.694 0"/>
+            </g>
+        </g>
+    </g>
+</svg>
