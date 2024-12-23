@@ -78,23 +78,15 @@
 					<ul class="form_wrap">
 						<li>
 							<div class="title">DSP 선택</div>
-							<div class="radio_wrap">
-								<span>
-									<input type="radio" id="radio1" name="dsp" checked>
-									<label for="radio1">모비온</label>
-								</span>
-								<span>
-									<input type="radio" id="radio2" name="dsp">
-									<label for="radio2">구글</label>
-								</span>
-								<span>
-									<input type="radio" id="radio3" name="dsp">
-									<label for="radio3">데이블</label>
-								</span>
-								<span>
-									<input type="radio" id="radio4" name="dsp">
-									<label for="radio4">크리테오</label>
-								</span>
+							<div class="move_wrap">
+								<span class="ranking">1순위</span><span class="move">모비온</span>
+								<!-- 비활성화 시 태그에 disabled 추가 <button disabled> -->
+								<button type="button" class="left_btn" aria-label="순위 왼쪽으로 이동 버튼"></button>
+								<button type="button" class="right_btn" aria-label="순위 오른쪽으로 이동 버튼"></button>
+								<span class="ranking">2순위</span><span class="move">구글</span>
+								<button type="button" class="left_btn" aria-label="순위 왼쪽으로 이동 버튼"></button>
+								<button type="button" class="right_btn" aria-label="순위 오른쪽으로 이동 버튼"></button>
+								<span class="ranking">3순위</span><span class="move">데이블</span>
 							</div>
 						</li>
 					</ul>
@@ -220,6 +212,107 @@
 								</span>
 							</div>
 						</li>
+						<li class="radio_sel1">
+							<div class="title">대체 이미지 타입</div>
+							<div>
+								<select>
+									<option value="" hidden="">선택하세요.</option>
+									<option value="">선택1</option>
+								</select>
+							</div>
+						</li>
+						<li class="radio_sel1">
+							<div class="title">대체 이미지 사이즈</div>
+							<div>
+								<select>
+									<option value="00" hidden="">선택하세요.</option>
+									<option value="01">360_50</option>
+									<option value="02">250_250</option>
+									<option value="03">120_600</option>
+									<option value="04">728_90</option>
+									<option value="05">300_180</option>
+									<option value="06">800_1500</option>
+									<option value="07">180_180</option>
+									<option value="08">160_300</option>
+									<option value="09">300_65</option>
+									<option value="10">850_800</option>
+									<option value="11">960_100</option>
+									<option value="12">720_1230</option>
+									<option value="13">160_600</option>
+									<option value="14">640_350</option>
+									<option value="15">300_250</option>
+									<option value="16">mangolife</option>
+									<option value="17">120_225 </option>
+									<option value="18">150_150 </option>
+									<option value="19">200_200 </option>
+									<option value="20">216_216 </option>
+									<option value="21">440_68</option>
+									<option value="22">468_60 </option>
+									<option value="23">550_67 </option>
+									<option value="24">570_240 </option>
+									<option value="25">620_77 </option>
+									<option value="26">620_90</option>
+									<option value="27">640_107 </option>
+									<option value="28">640_80 </option>
+									<option value="29">670_100</option>
+									<option value="30">670_112 </option>
+									<option value="31">677_120 </option>
+									<option value="32">686_86 </option>
+									<option value="33">720_120 </option>
+									<option value="34">799_131 </option>
+									<option value="35">960_120 </option>
+									<option value="36">970_90 </option>
+									<option value="37">75_180</option>
+									<option value="38">100_100</option>
+									<option value="39">130_130</option>
+									<option value="40">150_150</option>
+									<option value="41">170_170 </option>
+									<option value="42">200_200</option>
+									<option value="43">300_600 </option>
+									<option value="44">320_100 </option>
+									<option value="45">320_120 </option>
+									<option value="46">320_480 </option>
+									<option value="47">320_50 </option>
+									<option value="48">850_850 </option>
+									<option value="49">320_75</option>
+									<option value="50">240_240</option>
+									<option value="51">970_250</option>
+									<option value="52">270_125</option>
+									<option value="53">250_330</option>
+									<option value="54">260_330</option>
+									<option value="55">290_330</option>
+									<option value="56">330_150</option>
+									<option value="57">300_150</option>
+									<option value="58">336_280</option>
+									<option value="59">350_200</option>
+									<option value="60">1980_1080</option>
+									<option value="61">720_90</option>
+									<option value="62">80_300</option>
+									<option value="63">1200_600</option>
+									<option value="64">1980_400</option>
+									<option value="65">1029_222</option>
+									<option value="99">이미지없음</option>
+								</select>
+							</div>
+						</li>
+						<li class="radio_sel2">
+							<div class="title">하우스 배너 분류</div>
+							<div>
+								<select>
+									<option value="00" hidden="">선택하세요.</option>
+									<option value="script">SCRIPT</option>
+									<option value="url">URL</option>
+									<option value="document">DOCUMENT</option>
+								</select>
+							</div>
+						</li>
+						<li class="radio_sel2 flex_s">
+							<div class="title">하우스 배너 설정</div>
+							<div>
+								<textarea placeholder="* script의 경우 주소(src)만 입력해주세요.
+출력은 <script language='javascript' src='입력한 주소(src)'></script> 형태로 출력됩니다."></textarea>
+							</div>
+						</li>
 					</ul>
 				</div>
 				<div class="box_content">
@@ -328,25 +421,74 @@
 								</div>
 							</div>
 							<div>
-								<select>
+								<select name="MEDIA_SIZE_CODE">
 									<option value="00" hidden="">선택하세요.</option>
-									<option value="5">5</option>
-									<option value="6">6</option>
-									<option value="7">7</option>
-									<option value="8">8</option>
-									<option value="9">9</option>
-									<option value="10">10</option>
-									<option value="11">11</option>
-									<option value="12">12</option>
-									<option value="13">13</option>
-									<option value="14">14</option>
-									<option value="15">15</option>
-									<option value="16">16</option>
-									<option value="17">17</option>
-									<option value="18">18</option>
-									<option value="19">19</option>
-									<option value="20">20</option>
-									<option value="-1">제한없음</option>
+									<option value="01">360_50</option>
+									<option value="02">250_250</option>
+									<option value="03">120_600</option>
+									<option value="04">728_90</option>
+									<option value="05">300_180</option>
+									<option value="06">800_1500</option>
+									<option value="07">180_180</option>
+									<option value="08">160_300</option>
+									<option value="09">300_65</option>
+									<option value="10">850_800</option>
+									<option value="11">960_100</option>
+									<option value="12">720_1230</option>
+									<option value="13">160_600</option>
+									<option value="14">640_350</option>
+									<option value="15">300_250</option>
+									<option value="16">mangolife</option>
+									<option value="17">120_225 </option>
+									<option value="18">150_150 </option>
+									<option value="19">200_200 </option>
+									<option value="20">216_216 </option>
+									<option value="21">440_68</option>
+									<option value="22">468_60 </option>
+									<option value="23">550_67 </option>
+									<option value="24">570_240 </option>
+									<option value="25">620_77 </option>
+									<option value="26">620_90</option>
+									<option value="27">640_107 </option>
+									<option value="28">640_80 </option>
+									<option value="29">670_100</option>
+									<option value="30">670_112 </option>
+									<option value="31">677_120 </option>
+									<option value="32">686_86 </option>
+									<option value="33">720_120 </option>
+									<option value="34">799_131 </option>
+									<option value="35">960_120 </option>
+									<option value="36">970_90 </option>
+									<option value="37">75_180</option>
+									<option value="38">100_100</option>
+									<option value="39">130_130</option>
+									<option value="40">150_150</option>
+									<option value="41">170_170 </option>
+									<option value="42">200_200</option>
+									<option value="43">300_600 </option>
+									<option value="44">320_100 </option>
+									<option value="45">320_120 </option>
+									<option value="46">320_480 </option>
+									<option value="47">320_50 </option>
+									<option value="48">850_850 </option>
+									<option value="49">320_75</option>
+									<option value="50">240_240</option>
+									<option value="51">970_250</option>
+									<option value="52">270_125</option>
+									<option value="53">250_330</option>
+									<option value="54">260_330</option>
+									<option value="55">290_330</option>
+									<option value="56">330_150</option>
+									<option value="57" selected="">300_150</option>
+									<option value="58">336_280</option>
+									<option value="59">350_200</option>
+									<option value="60">1980_1080</option>
+									<option value="61">720_90</option>
+									<option value="62">80_300</option>
+									<option value="63">1200_600</option>
+									<option value="64">1980_400</option>
+									<option value="65">1029_222</option>
+									<option value="99">이미지없음</option>
 								</select>
 							</div>
 						</li>
