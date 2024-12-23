@@ -122,7 +122,11 @@
 
 		.box {
 			text-align: center;
-			flex: 33.333%;
+			flex: 50%;
+
+			img {
+				margin-bottom: 18px;
+			}
 
 			strong {
 				font-size: 18px;
@@ -237,6 +241,59 @@
 					font-size: 14px;
 				}
 			}
+		}
+	}
+
+	/******************** setting_3 ********************/
+	.form_wrap {
+		.move_wrap {
+			display: flex;
+			align-items: center;
+
+			.ranking {
+				font-size: 15px;
+				font-weight: bold;
+
+				&::after {
+					content: "";
+					width: 1px;
+					height: 13px;
+					display: inline-block;
+					background-color: #7777;
+					margin: 0 8px;
+				}
+			}
+
+			.move {
+				/* border: 1px solid red; */
+				min-width: 50px;
+			}
+
+			.left_btn {
+				width: 9px;
+				height: 12px;
+				background: url('../img/btn-left.png') no-repeat center;
+				margin: 0 10px 0 15px;
+			}
+
+			.right_btn {
+				width: 9px;
+				height: 12px;
+				background: url('../img/btn-right.png') no-repeat center;
+				margin-right: 15px;
+			}
+
+			.left_btn:disabled {
+				background: url('../img/btn-left-disabled.png') no-repeat center;
+			}
+
+			.right_btn:disabled {
+				background: url('../img/btn-right-disabled.png') no-repeat center;
+			}
+		}
+
+		.radio_sel2 {
+			display: none;
 		}
 	}
 }

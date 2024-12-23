@@ -4,6 +4,7 @@
   /* box_wrap */
   /******************** setting_2 ********************/
   /* form_box_wrap */
+  /******************** setting_3 ********************/
 }
 .content h2 {
   font-size: 18px;
@@ -126,9 +127,12 @@
 }
 .content .box_wrap .box {
   text-align: center;
-  -webkit-box-flex: 33.333%;
-      -ms-flex: 33.333%;
-          flex: 33.333%;
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+}
+.content .box_wrap .box img {
+  margin-bottom: 18px;
 }
 .content .box_wrap .box strong {
   font-size: 18px;
@@ -237,4 +241,49 @@
 }
 .content .form_box_wrap .form_box button .size {
   font-size: 14px;
+}
+.content .form_wrap .move_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.content .form_wrap .move_wrap .ranking {
+  font-size: 15px;
+  font-weight: bold;
+}
+.content .form_wrap .move_wrap .ranking::after {
+  content: "";
+  width: 1px;
+  height: 13px;
+  display: inline-block;
+  background-color: rgba(119, 119, 119, 0.4666666667);
+  margin: 0 8px;
+}
+.content .form_wrap .move_wrap .move {
+  /* border: 1px solid red; */
+  min-width: 50px;
+}
+.content .form_wrap .move_wrap .left_btn {
+  width: 9px;
+  height: 12px;
+  background: url("../img/btn-left.png") no-repeat center;
+  margin: 0 10px 0 15px;
+}
+.content .form_wrap .move_wrap .right_btn {
+  width: 9px;
+  height: 12px;
+  background: url("../img/btn-right.png") no-repeat center;
+  margin-right: 15px;
+}
+.content .form_wrap .move_wrap .left_btn:disabled {
+  background: url("../img/btn-left-disabled.png") no-repeat center;
+}
+.content .form_wrap .move_wrap .right_btn:disabled {
+  background: url("../img/btn-right-disabled.png") no-repeat center;
+}
+.content .form_wrap .radio_sel2 {
+  display: none;
 }/*# sourceMappingURL=setting.css.map */
