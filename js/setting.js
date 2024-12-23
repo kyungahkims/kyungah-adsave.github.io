@@ -31,3 +31,25 @@ $('.form_box_wrapper1 .form_box_wrap button').click(function () {
 $('.form_box_wrapper2 .form_box_wrap button').click(function () {
 	$(this).toggleClass('active');
 });
+
+/* 최후의 순간 옵션 */
+$('input[name="last"]').on('change', function () {
+	const selectedId = $(this).attr('id');
+
+	$('.radio_sel1, .radio_sel2').hide().find('select').prop('selectedIndex', 0).end().find('textarea').val('');
+
+	if (selectedId === 'radio10') {
+		$('.radio_sel1').css('display', 'flex');
+	} else if (selectedId === 'radio11') {
+		$('.radio_sel2').css('display', 'flex');
+	}
+});
+
+/* 광고 선택 순위 이동 */
+$(".move_wrap button").click(function () {
+	const leftMove = $(this).prevAll(".move").first().text();
+	const rightMove = $(this).nextAll(".move").first().text();
+
+	$(this).prevAll(".move").first().text(rightMove);
+	$(this).nextAll(".move").first().text(leftMove);
+});
