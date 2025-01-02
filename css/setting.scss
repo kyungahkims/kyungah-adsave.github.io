@@ -158,6 +158,18 @@
 			.form_box_wrap {
 
 				.form_box {
+					&.horizontal_height {
+						height: 140px;
+					}
+
+					&.square_height {
+						height: 240px;
+					}
+
+					&.vertical_height {
+						height: 300px;
+					}
+
 					button {
 						background-color: #ecfaff;
 
@@ -265,7 +277,6 @@
 			}
 
 			.move {
-				/* border: 1px solid red; */
 				min-width: 50px;
 			}
 

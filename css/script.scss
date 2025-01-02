@@ -11,7 +11,7 @@
 		padding-bottom: 35px;
 	}
 
-	.contract_information {
+	.form_wrap {
 		&>li {
 
 			&:not(:first-child) {
@@ -25,6 +25,11 @@
 				text-align: center;
 				padding: 23px 15px;
 				margin-top: 7px;
+			}
+
+			.guide_textarea {
+				height: 260px;
+				text-align: left;
 			}
 
 			.btn_wrap {

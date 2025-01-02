@@ -11,10 +11,10 @@
   min-height: 370px;
   padding-bottom: 35px;
 }
-.content .contract_information > li:not(:first-child) {
+.content .form_wrap > li:not(:first-child) {
   margin-top: 18px;
 }
-.content .contract_information > li textarea {
+.content .form_wrap > li textarea {
   width: 100%;
   height: 80px;
   font-size: 16px;
@@ -22,7 +22,11 @@
   padding: 23px 15px;
   margin-top: 7px;
 }
-.content .contract_information > li .btn_wrap {
+.content .form_wrap > li .guide_textarea {
+  height: 260px;
+  text-align: left;
+}
+.content .form_wrap > li .btn_wrap {
   margin: 10px auto 0;
 }
 .content .copy_wrap {

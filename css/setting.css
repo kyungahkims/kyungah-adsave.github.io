@@ -160,6 +160,15 @@
           align-items: flex-start;
   margin-top: 40px;
 }
+.content .form_wrap .form_box_wrapper2 .form_box_wrap .form_box.horizontal_height {
+  height: 140px;
+}
+.content .form_wrap .form_box_wrapper2 .form_box_wrap .form_box.square_height {
+  height: 240px;
+}
+.content .form_wrap .form_box_wrapper2 .form_box_wrap .form_box.vertical_height {
+  height: 300px;
+}
 .content .form_wrap .form_box_wrapper2 .form_box_wrap .form_box button {
   background-color: #ecfaff;
 }
@@ -263,7 +272,6 @@
   margin: 0 8px;
 }
 .content .form_wrap .move_wrap .move {
-  /* border: 1px solid red; */
   min-width: 50px;
 }
 .content .form_wrap .move_wrap .left_btn {

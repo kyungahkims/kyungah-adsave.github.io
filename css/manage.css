@@ -1,6 +1,14 @@
 .content {
   /* manage */
 }
+.content .flex_c {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 .content .manage_wrap {
   min-width: 220px;
 }
@@ -19,6 +27,9 @@
 .content .manage.on:before {
   background: url("../img/icon-on.svg") no-repeat center;
 }
+.content .manage.off:before {
+  background: url("../img/icon-off.svg") no-repeat center;
+}
 .content .manage.memo:before {
   background: url("../img/icon-memo.svg") no-repeat center;
 }
@@ -36,4 +47,211 @@
 }
 .content .manage.exposure:before {
   background: url("../img/icon-exposure.svg") no-repeat center;
+}
+.content .calendar .input_wrap input {
+  width: 200px;
+  margin-right: 0;
+  border: none;
+}
+
+/* modal_wrap */
+.modal_wrap {
+  /* check_wrap */
+}
+.modal_wrap .pop1 {
+  width: 850px;
+  min-width: 850px;
+}
+.modal_wrap .pop2 {
+  width: 650px;
+}
+.modal_wrap .pop3 {
+  width: 450px;
+}
+.modal_wrap .pop_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #e3e3e3;
+  padding-bottom: 20px;
+  margin-bottom: 18px;
+}
+.modal_wrap .pop_title h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+.modal_wrap .pop_title button {
+  background-color: transparent;
+}
+.modal_wrap textarea {
+  width: 100%;
+  height: 120px;
+  font-size: 14px;
+  border-radius: 3px;
+  border: 1px solid #cbcbcb;
+  padding: 15px;
+}
+.modal_wrap textarea::-webkit-input-placeholder {
+  color: #999;
+}
+.modal_wrap textarea::-moz-placeholder {
+  color: #999;
+}
+.modal_wrap textarea:-ms-input-placeholder {
+  color: #999;
+}
+.modal_wrap textarea::-ms-input-placeholder {
+  color: #999;
+}
+.modal_wrap textarea::placeholder {
+  color: #999;
+}
+.modal_wrap .letters {
+  font-size: 12px;
+  text-align: right;
+  color: #999;
+  margin-top: 5px;
+}
+.modal_wrap .btn_wrap {
+  text-align: center;
+}
+.modal_wrap .btn_wrap button {
+  width: 80px;
+  height: 35px;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 3px;
+  background-color: #17a2ff;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.modal_wrap .btn_wrap button:hover {
+  -webkit-filter: brightness(1.05);
+          filter: brightness(1.05);
+}
+.modal_wrap .table_wrap {
+  width: 100%;
+  max-height: 360px;
+  margin-top: 30px;
+  overflow-y: auto;
+}
+.modal_wrap .table_wrap table {
+  width: 100%;
+  font-size: 13px;
+  text-align: center;
+}
+.modal_wrap .table_wrap table tr th:nth-child(1),
+.modal_wrap .table_wrap table tr td:nth-child(1) {
+  width: 100px;
+}
+.modal_wrap .table_wrap table tr th:nth-child(2),
+.modal_wrap .table_wrap table tr td:nth-child(2) {
+  width: 150px;
+}
+.modal_wrap .table_wrap table tr th:nth-child(3),
+.modal_wrap .table_wrap table tr td:nth-child(3) {
+  width: 350px;
+}
+.modal_wrap .table_wrap table thead {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: #f5f5f5;
+}
+.modal_wrap .table_wrap table thead th {
+  padding: 10px 3px;
+}
+.modal_wrap .table_wrap table tbody td {
+  padding: 15px 3px;
+  border-bottom: 1px solid #e3e3e3;
+}
+.modal_wrap .table_wrap table tbody textarea {
+  width: 350px;
+  height: 90px;
+  font-size: 13px;
+  padding: 10px;
+}
+.modal_wrap .table_wrap table tbody button {
+  width: 45px;
+  height: 30px;
+  border-radius: 3px;
+}
+.modal_wrap .table_wrap table tbody button.modify_btn {
+  color: #17a2ff;
+  border: 1px solid #17a2ff;
+  background-color: #ecfaff;
+}
+.modal_wrap .table_wrap table tbody button.remove_btn {
+  color: #999999;
+  border: 1px solid #999999;
+  background-color: #f3f2f2;
+}
+.modal_wrap .table_wrap table tbody button.cancle_btn {
+  color: #fff;
+  background-color: #b8b8b8;
+}
+.modal_wrap .table_wrap table tbody button.save_btn {
+  color: #fff;
+  background-color: #17a2ff;
+}
+.modal_wrap .table_wrap table tbody button:last-child {
+  margin-left: 5px;
+}
+.modal_wrap .check_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  gap: 10px;
+  height: 210px;
+  padding-top: 6px;
+  margin-bottom: 10px;
+  overflow-y: auto;
+}
+.modal_wrap .check_wrap span {
+  height: 37px;
+}
+.modal_wrap .check_wrap input[type=checkbox]:checked + label {
+  font-size: 14px;
+  color: #fff;
+  background-color: #17a2ff;
+}
+.modal_wrap .check_wrap input[type=checkbox] {
+  display: none;
+}
+.modal_wrap .check_wrap input[type=checkbox] + label {
+  font-size: 14px;
+  border: 1px solid #17a2ff;
+  border-radius: 19px;
+  background-color: #fff;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+.modal_wrap h5 {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+.modal_wrap .radio_wrap {
+  margin-bottom: 20px;
+}
+.modal_wrap .radio_sel1 {
+  visibility: hidden;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.modal_wrap .radio_sel1 input {
+  height: 30px;
+  border-radius: 3px;
+  border: 1px solid #cbcbcb;
+  padding-left: 15px;
+  margin-right: 10px;
 }/*# sourceMappingURL=manage.css.map */

@@ -382,6 +382,7 @@ aside {
 
 			.subs {
 				display: none;
+				z-index: 999;
 
 				li {
 
@@ -588,7 +589,6 @@ aside {
 				background-color: #fff;
 				padding: 5px 10px;
 				box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.16);
-				z-index: 2;
 
 				li {
 
@@ -663,49 +663,6 @@ aside {
 					background-color: #3e3e3e;
 					margin-right: 10px;
 					margin-top: 10px;
-				}
-			}
-
-			.info {
-				position: relative;
-
-				.info_btn {
-					background-color: transparent;
-					margin-left: 7px;
-					margin-top: 3px;
-
-					&::after {
-						content: "";
-						width: 16px;
-						height: 16px;
-						display: inline-block;
-						background: url('../img/icon-tip.svg') no-repeat center;
-						cursor: pointer;
-					}
-
-					&:hover+.info_box {
-						display: block;
-					}
-				}
-
-				.info_box {
-					display: none;
-					position: absolute;
-					top: 5px;
-					left: 26px;
-					font-size: 12px;
-					color: #999999;
-					border-radius: 6px;
-					box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.12);
-					border: 1px solid #f0f1f5;
-					background-color: #fff;
-					padding: 6px 10px;
-					z-index: 2;
-					white-space: nowrap;
-
-					li {
-						line-height: 1.6;
-					}
 				}
 			}
 
@@ -852,6 +809,50 @@ aside {
 		}
 	}
 
+	/* info */
+	.info {
+		position: relative;
+
+		.info_btn {
+			background-color: transparent;
+			margin-left: 7px;
+			margin-top: 3px;
+
+			&::after {
+				content: "";
+				width: 16px;
+				height: 16px;
+				display: inline-block;
+				background: url('../img/icon-tip.svg') no-repeat center;
+				cursor: pointer;
+			}
+
+			&:hover+.info_box {
+				display: block;
+			}
+		}
+
+		.info_box {
+			display: none;
+			position: absolute;
+			top: 5px;
+			left: 26px;
+			font-size: 12px;
+			color: #999999;
+			border-radius: 6px;
+			box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.12);
+			border: 1px solid #f0f1f5;
+			background-color: #fff;
+			padding: 6px 10px;
+			z-index: 1000;
+			white-space: nowrap;
+
+			li {
+				line-height: 1.6;
+			}
+		}
+	}
+
 	/* btn_wrap */
 	.btn_wrap {
 		text-align: center;
@@ -894,7 +895,7 @@ aside {
 			.length_group {
 				display: flex;
 
-				.select_box_wrap {
+				/* .select_box_wrap {
 					position: relative;
 
 					.select_box {
@@ -928,7 +929,7 @@ aside {
 							}
 						}
 					}
-				}
+				} */
 			}
 		}
 
@@ -949,6 +950,17 @@ aside {
 		}
 
 		.btnexcel {
+			height: 30px;
+			font-size: 14px;
+			letter-spacing: -0.28px;
+			color: #fff;
+			border-radius: 3px;
+			border: none;
+			background: none;
+			background-color: #17a2ff;
+			padding: 0 20px;
+			transition: all 0.2s;
+
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -961,6 +973,13 @@ aside {
 				height: 18px;
 				background: url('../img/excel.png') no-repeat center;
 				margin-right: 7px;
+			}
+
+			&:hover {
+				background: none !important;
+				border: none !important;
+				background-color: #17a2ff !important;
+				filter: brightness(1.03);
 			}
 		}
 
@@ -1001,7 +1020,6 @@ aside {
 
 	/* table_wrap */
 	.table_wrap {
-		height: 790px;
 		margin-top: 25px;
 		overflow: auto;
 
@@ -1124,6 +1142,45 @@ footer {
 	}
 }
 
+/* tab */
+.tab {
+	display: flex;
+	align-items: center;
+	column-gap: 2px;
+
+	.tablinks {
+		width: 100px;
+		height: 38px;
+		font-size: 14px;
+		font-weight: 500;
+		color: #777;
+		border-radius: 3px 3px 0 0;
+		border: 1px solid #d4d4d4;
+		border-bottom: none;
+		background-color: #f5f5f5;
+
+		&.active {
+			position: relative;
+			top: 1px;
+			height: 39px;
+			color: #17a2ff;
+			border: 1px solid #17a2ff;
+			border-bottom: none;
+			background-color: #fff;
+			z-index: 2;
+		}
+	}
+}
+
+.tab_wrap {
+	border-top: 1px solid #17a2ff;
+
+	.tabcontent {
+		height: 420px;
+		padding: 16px;
+	}
+}
+
 /* radio_wrap */
 .radio_wrap {
 	display: flex;
@@ -1206,6 +1263,34 @@ input[type="checkbox"]:checked {
 	margin-top: 20px;
 }
 
+.mt35 {
+	margin-top: 35px;
+}
+
+/* modal_wrap */
+.modal_wrap {
+	display: none;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	width: 100%;
+	height: 100vh;
+	font-family: var(--font-family);
+	color: #111;
+	background-color: rgba(0, 0, 0, 0.5);
+	transition: all 0.3s;
+
+	.pop {
+		border-radius: 15px;
+		box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.15);
+		background-color: #fff;
+		padding: 20px 25px 40px 25px;
+	}
+}
+
 /* 달력 라이브러리 */
 .daterangepicker {
 	margin-top: 15px !important;
@@ -1242,17 +1327,25 @@ input[type="checkbox"]:checked {
 	padding: 10px !important;
 }
 
-.custom-swal-btn {
-	outline: none !important;
-	box-shadow: none !important;
-}
-
 .swal2-styled.swal2-confirm {
 	padding: 8px 20px;
+	outline: none !important;
+	box-shadow: none !important;
 	background-color: #17a2ff !important;
 
 	&:hover {
 		background-color: #17a2ff !important;
+	}
+}
+
+.swal2-styled.swal2-cancel {
+	padding: 8px 20px;
+	outline: none !important;
+	box-shadow: none !important;
+	background-color: #b8b8b8 !important;
+
+	&:hover {
+		background-color: #b8b8b8 !important;
 	}
 }
 
@@ -1275,4 +1368,70 @@ table.dataTable thead .sorting::before {
 
 table.dataTable thead .sorting::after {
 	content: "" !important;
+}
+
+/* datatable 라이브러리 옵션*/
+.table_menu_wrap {
+
+	.dt-button-background {
+		background: none;
+	}
+
+	.dt-button-down-arrow {
+		display: none;
+	}
+
+	.dt-button-collection {
+		border: 1px solid #cbcbcb;
+	}
+
+	.dt-button-collection .dt-button {
+		text-decoration: line-through;
+		color: #ff4959;
+	}
+
+	.dt-button-collection .dt-button-active {
+		text-decoration: none;
+		color: #222;
+	}
+
+	.dt-button-collection .dt-button-active:after {
+		content: "";
+	}
+}
+
+.dataTables_scrollFoot {
+	background-color: #ecfaff;
+	padding: 8px 5px !important;
+}
+
+table.dataTable tfoot th {
+	text-align: center !important;
+	border-top: none !important;
+}
+
+.dt-button-info {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: auto !important;
+	transform: translate(50%, 50%);
+	font-size: 15px;
+	font-weight: bold;
+	border-radius: 8px;
+	background-color: #fff;
+	box-shadow: 1px 4px 8px rgba(209, 209, 209, 0.808) !important;
+	padding: 20px;
+
+	&>div {
+		padding: 0 !important;
+	}
+
+	&::before {
+		content: "";
+		width: 16px;
+		height: 16px;
+		background: url('../img/checkbox-on.svg') no-repeat center;
+		margin-right: 8px;
+	}
 }
