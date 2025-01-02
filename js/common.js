@@ -97,7 +97,7 @@ $('#dateInput').daterangepicker({
 });
 
 /* 테이블 컬럼 설정 */
-$('.select_box_wrap button').click(function (e) {
+/* $('.select_box_wrap button').click(function (e) {
 	$('.select_box').slideToggle('300').addClass('active');
 	e.stopPropagation();
 });
@@ -112,4 +112,9 @@ $('.select_box').click(function (e) {
 
 $('.select_box li').click(function () {
 	$(this).toggleClass('active');
+}); */
+
+/* 모달 닫기 */
+$('.bt_close').click(function () {
+	$('.modal_wrap').css('display', 'none')
 });
