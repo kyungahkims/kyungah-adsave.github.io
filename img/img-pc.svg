@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55">
+    <defs>
+        <linearGradient id="opvxzumtva" x1=".5" y1=".227" x2=".5" y2="1.061" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#17a2ff"/>
+            <stop offset="1" stop-color="#17c8ff"/>
+        </linearGradient>
+        <linearGradient id="39be3amklb" x1=".5" y1="1.549" x2=".5" y2="-.547" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#17dfff"/>
+            <stop offset="1" stop-color="#289bff"/>
+        </linearGradient>
+        <linearGradient id="rfw8qcekbc" y1=".5" x2="1" y2=".5" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#17a2ff"/>
+            <stop offset="1" stop-color="#8deafd"/>
+        </linearGradient>
+    </defs>
+    <g transform="translate(-339 -356)">
+        <circle data-name="타원 321" cx="27.5" cy="27.5" r="27.5" transform="translate(339 356)" style="fill:#fff"/>
+        <g data-name="그룹 7758">
+            <path data-name="패스 12807" d="M299.245 569.875c.134.764-.169 1.389-.676 1.389h-7.638c-.506 0-.811-.625-.676-1.389l1.008-5.722c.134-.764.659-1.389 1.165-1.389h4.643c.506 0 1.031.625 1.165 1.389z" transform="translate(71.75 -174.501)" style="fill:url(#opvxzumtva)"/>
+            <path data-name="패스 12808" d="M297.03 525.083a3 3 0 0 0-3-3h-20.569a3 3 0 0 0-3 3v12.367h26.569z" transform="translate(82.752 -151.849)" style="fill:url(#39be3amklb)"/>
+            <path data-name="패스 12809" d="M270.466 556.756v2.485a3 3 0 0 0 3 3h20.573a3 3 0 0 0 3-3v-2.485z" transform="translate(82.752 -171.155)" style="fill:url(#rfw8qcekbc)"/>
+            <path data-name="패스 12810" d="M286.618 522.087h-13.157a3 3 0 0 0-3 3v6.249a13.589 13.589 0 0 0 16.152-9.244z" transform="translate(82.752 -151.849)" style="opacity:.2;fill:#fff"/>
+        </g>
+        <path data-name="패스 12817" d="M300.136 561.3a1.182 1.182 0 1 1-1.182-1.182 1.181 1.181 0 0 1 1.182 1.182z" transform="translate(67.546 -173.028)" style="fill:#fff"/>
+    </g>
+</svg>

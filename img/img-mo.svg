@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55">
+    <defs>
+        <linearGradient id="2bqzemogia" x1=".5" y1="1.013" x2=".5" y2="-.216" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#23b0ff"/>
+            <stop offset="1" stop-color="#17dfff"/>
+        </linearGradient>
+    </defs>
+    <g transform="translate(-339 -356)">
+        <circle data-name="타원 321" cx="27.5" cy="27.5" r="27.5" transform="translate(339 356)" style="fill:#fff"/>
+        <g data-name="그룹 7746">
+            <g data-name="그룹 7745" transform="translate(357.528 368.253)">
+                <rect data-name="사각형 6371" width="19.944" height="30.493" rx="4" style="fill:url(#2bqzemogia)"/>
+                <g data-name="그룹 7744">
+                    <path data-name="패스 12788" d="M445.287 235.806a.827.827 0 0 1-.826-.827.827.827 0 0 1 .826-.827h3.674a.827.827 0 0 1 .827.827.827.827 0 0 1-.827.827h-3.674z" transform="translate(-437.153 -230.719)" style="fill:#0082f7"/>
+                </g>
+            </g>
+            <path data-name="패스 12789" d="M446.934 229.787a13.163 13.163 0 0 0-.229-2.436 3.97 3.97 0 0 0-1.1-.158H433.64a3.991 3.991 0 0 0-3.99 3.99v11.1a13.158 13.158 0 0 0 17.284-12.494z" transform="translate(-72.122 141.06)" style="opacity:.2;fill:#fff"/>
+        </g>
+        <path data-name="패스 12880" d="M300.136 561.3a1.182 1.182 0 1 1-1.182-1.182 1.181 1.181 0 0 1 1.182 1.182z" transform="translate(68.728 -167.028)" style="fill:#fff"/>
+    </g>
+</svg>

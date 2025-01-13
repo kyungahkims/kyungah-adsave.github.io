@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+    <g data-name="타원 301" style="stroke:#fff;fill:none">
+        <circle cx="8" cy="8" r="8" style="stroke:none"/>
+        <circle cx="8" cy="8" r="7.5" style="fill:none"/>
+    </g>
+    <g data-name="합치기 38" style="fill:#fff">
+        <path d="M12881.5-9053.499h-1.001v-5.001h1.001v5.001zm-.499-7a.501.501 0 1 1-.002-1 .501.501 0 0 1 .002 1z" style="stroke:none" transform="translate(-12872.999 9066)"/>
+        <path d="m12881-9053.999-.001-4.001.001 4.001m1 1h-2.001V-9059h2.001v6.001zm-.999-7a1 1 0 1 1-.003-2.001 1 1 0 0 1 .003 2.001z" style="fill:#fff;stroke:none" transform="translate(-12872.999 9066)"/>
+    </g>
+</svg>
