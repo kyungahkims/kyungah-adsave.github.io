@@ -143,6 +143,781 @@
 					</ul>
 				</div>
 				<div class="box_content">
+					<h2>CPC 타겟팅 정보</h2>
+					<ul class="form_wrap">
+						<li class="flex_s">
+							<div class="title">CPC 일괄 수정
+								<div class="info">
+									<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+									<ul class="info_box">
+										<li>CPC 가중치/노출율 전체 일괄 수정 또는 (%)단위 상승/하락 기능</li>
+									</ul>
+								</div>
+							</div>
+							<div>
+								<div class="radio_wrap">
+									<span>
+										<input type="radio" id="radio18" name="CPC" checked>
+										<label for="radio18">일괄 수정</label>
+									</span>
+									<span>
+										<input type="radio" id="radio19" name="CPC">
+										<label for="radio19">일괄(%) 상승</label>
+									</span>
+									<span>
+										<input type="radio" id="radio20" name="CPC">
+										<label for="radio20">일괄(%) 하락</label>
+									</span>
+								</div>
+								<table class="table mini_table">
+									<thead>
+										<tr>
+											<th>타겟팅 사용 여부</th>
+											<th class="table_sel1">가중치</th>
+											<th class="table_sel1">노출율</th>
+											<th class="table_sel2">가중치(%) 상승</th>
+											<th class="table_sel2">노출율(%) 상승</th>
+											<th class="table_sel3">가중치(%) 하락</th>
+											<th class="table_sel3">노출율(%) 하락</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<div class="cpc_list">
+													<input type="checkbox" id="checkbox0">
+													<label for="checkbox0">전체 사용</label>
+												</div>
+											</td>
+											<td class="table_sel1">
+												<div><input type="text" maxlength="3" placeholder="100"></div>
+											</td>
+											<td class="table_sel1">
+												<div><input type="text" maxlength="3" placeholder="100"></div>
+											</td>
+											<td class="table_sel2">
+												<div><input type="text" maxlength="3" placeholder="10% ▲"></div>
+											</td>
+											<td class="table_sel2">
+												<div><input type="text" maxlength="3" placeholder="10% ▲"></div>
+											</td>
+											<td class="table_sel3">
+												<div><input type="text" maxlength="3" placeholder="10% ▼"></div>
+											</td>
+											<td class="table_sel3">
+												<div><input type="text" maxlength="3" placeholder="10% ▼"></div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</li>
+						<li class="flex_s">
+							<div class="title">CPC 가중치</div>
+							<div class="table_group">
+								<table class="table">
+									<thead>
+										<tr>
+											<th>타겟팅 사용 여부</th>
+											<th>가중치</th>
+											<th>노출율</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<div class="cpc_list">
+													<input type="checkbox" id="checkbox1" checked>
+													<label for="checkbox1">원타임카트매칭(HC)</label>
+													<div class="info">
+														<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+														<ul class="info_box">
+															<li>1시간 내에 장바구니에 담은 상품을 최신순으로 광고 노출</li>
+														</ul>
+													</div>
+												</div>
+											</td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="cpc_list">
+													<input type="checkbox" id="checkbox2" checked>
+													<label for="checkbox2">투데이카트매칭(TC)</label>
+													<div class="info">
+														<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+														<ul class="info_box">
+															<li>광고주 사이트에서 유저가 24시간 이내에 장바구니에 담은 상품을 노출</li>
+														</ul>
+													</div>
+												</div>
+											</td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="cpc_list">
+													<input type="checkbox" id="checkbox3" checked>
+													<label for="checkbox3">위클리카트매칭(WC)</label>
+													<div class="info">
+														<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+														<ul class="info_box">
+															<li>광고주 사이트에서 유저가 168시간 이내에 장바구니에 담은 상품을 노출</li>
+														</ul>
+													</div>
+												</div>
+											</td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="cpc_list">
+													<input type="checkbox" id="checkbox4" checked>
+													<label for="checkbox4">먼슬리카트매칭(MC)</label>
+													<div class="info">
+														<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+														<ul class="info_box">
+															<li>광고주 사이트에서 유저가 30일 이내에 장바구니에 담은 상품을 노출</li>
+														</ul>
+													</div>
+												</div>
+											</td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="cpc_list">
+													<input type="checkbox" id="checkbox5" checked>
+													<label for="checkbox5">카트매칭(CW)</label>
+													<div class="info">
+														<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+														<ul class="info_box">
+															<li>광고주 사이트에서 유저가 장바구니에 담은 상품을 노출</li>
+														</ul>
+													</div>
+												</div>
+											</td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="cpc_list">
+													<input type="checkbox" id="checkbox6" checked>
+													<label for="checkbox6">커스텀하이(CH)</label>
+													<div class="info">
+														<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+														<ul class="info_box">
+															<li>TUNE720에서 설정한 상급 모수(캠페인)의 상품</li>
+														</ul>
+													</div>
+												</div>
+											</td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="cpc_list">
+													<input type="checkbox" id="checkbox7" checked>
+													<label for="checkbox7">커스텀리타겟팅(CR)</label>
+													<div class="info">
+														<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+														<ul class="info_box">
+															<li>TUNE720에서 설정한 모수(캠페인)의 상품을 노출</li>
+														</ul>
+													</div>
+												</div>
+											</td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="cpc_list">
+													<input type="checkbox" id="checkbox8" checked>
+													<label for="checkbox8">원타임본상품매칭(HV)</label>
+													<div class="info">
+														<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+														<ul class="info_box">
+															<li>1시간 이내 본 상품을 추천</li>
+														</ul>
+													</div>
+												</div>
+											</td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="cpc_list">
+													<input type="checkbox" id="checkbox9" checked>
+													<label for="checkbox9">투데이본상품매칭(TV)</label>
+													<div class="info">
+														<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+														<ul class="info_box">
+															<li>광고주 사이트에서 유저가 24시간 이내에 본 상품을 노출</li>
+														</ul>
+													</div>
+												</div>
+											</td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="cpc_list">
+													<input type="checkbox" id="checkbox10" checked>
+													<label for="checkbox10">위클리본상품매칭(WV)</label>
+													<div class="info">
+														<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+														<ul class="info_box">
+															<li>광고주 사이트에서 유저가 168시간 이내 본 상품을 노출</li>
+														</ul>
+													</div>
+												</div>
+											</td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="cpc_list">
+													<input type="checkbox" id="checkbox11" checked>
+													<label for="checkbox11">먼슬리본상품매칭(MV)</label>
+													<div class="info">
+														<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+														<ul class="info_box">
+															<li>광고주 사이트에서 유저가 720시간 1회 본 상품을 노출</li>
+														</ul>
+													</div>
+												</div>
+											</td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="cpc_list">
+													<input type="checkbox" id="checkbox12" checked>
+													<label for="checkbox12">관심상품매칭(RC)</label>
+													<div class="info">
+														<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+														<ul class="info_box">
+															<li>광고주 사이트에서 유저가 2회 이상 본 상품을 노출</li>
+														</ul>
+													</div>
+												</div>
+											</td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="cpc_list">
+													<input type="checkbox" id="checkbox13" checked>
+													<label for="checkbox13">본상품매칭(SR)</label>
+													<div class="info">
+														<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+														<ul class="info_box">
+															<li>광고주 사이트에서 유저가 본 상품을 노출</li>
+														</ul>
+													</div>
+												</div>
+											</td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="cpc_list">
+													<input type="checkbox" id="checkbox14" checked>
+													<label for="checkbox14">헤비리인게이지먼트(HE)</label>
+													<div class="info">
+														<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+														<ul class="info_box">
+															<li>동일한 광고주에서 3회 이상 전환 또는 장바구니<br>상품의 카테고리 인기재 상품을 최신순으로 송출</li>
+														</ul>
+													</div>
+												</div>
+											</td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="cpc_list">
+													<input type="checkbox" id="checkbox15" checked>
+													<label for="checkbox15">투데이보완재매칭(TP)</label>
+													<div class="info">
+														<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+														<ul class="info_box">
+															<li>24시간 이내 전환이 일어난 상품 기준으로 보완재 상품 송출</li>
+														</ul>
+													</div>
+												</div>
+											</td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="cpc_list">
+													<input type="checkbox" id="checkbox16" checked>
+													<label for="checkbox16">위클리보완재매칭(WP)</label>
+													<div class="info">
+														<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+														<ul class="info_box">
+															<li>168시간 이내 전환이 일어난 상품 기준으로 다른 상품을 추천</li>
+														</ul>
+													</div>
+												</div>
+											</td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+										</tr>
+									</tbody>
+								</table>
+								<table class="table">
+									<thead>
+										<tr>
+											<th>타겟팅 사용 여부</th>
+											<th>가중치</th>
+											<th>노출율</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<div class="cpc_list">
+													<input type="checkbox" id="checkbox17" checked>
+													<label for="checkbox17">먼슬리보완재매칭(SP)</label>
+													<div class="info">
+														<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+														<ul class="info_box">
+															<li>유저들의 구매패턴을 분석하여, 광고주 사이트에서<br>구매를 한 유저에게 연관성 있는 상품을 노출</li>
+														</ul>
+													</div>
+												</div>
+											</td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="cpc_list">
+													<input type="checkbox" id="checkbox18" checked>
+													<label for="checkbox18">하프보완재매칭(HP)</label>
+													<div class="info">
+														<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+														<ul class="info_box">
+															<li>6개월 이내 전환된 상품과 연관성 있는 상품(보완재) 을 추천</li>
+														</ul>
+													</div>
+												</div>
+											</td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="cpc_list">
+													<input type="checkbox" id="checkbox19" checked>
+													<label for="checkbox19">원타임리턴매칭(HR)</label>
+													<div class="info">
+														<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+														<ul class="info_box">
+															<li>1시간 이내 방문한 사이트를 추천</li>
+														</ul>
+													</div>
+												</div>
+											</td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="cpc_list">
+													<input type="checkbox" id="checkbox20" checked>
+													<label for="checkbox20">투데이리턴매칭(TR)</label>
+													<div class="info">
+														<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+														<ul class="info_box">
+															<li>최근 24시간 내에 광고주 도메인 1~2회 방문한 유저에게 광고를 노출</li>
+														</ul>
+													</div>
+												</div>
+											</td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="cpc_list">
+													<input type="checkbox" id="checkbox21" checked>
+													<label for="checkbox21">위클리리턴매칭(WR)</label>
+													<div class="info">
+														<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+														<ul class="info_box">
+															<li>168시간 이내에 광고주 사이트 1~2회 방문한 유저에게 광고를 노출</li>
+														</ul>
+													</div>
+												</div>
+											</td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="cpc_list">
+													<input type="checkbox" id="checkbox22" checked>
+													<label for="checkbox22">먼슬리리턴매칭(FR)</label>
+													<div class="info">
+														<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+														<ul class="info_box">
+															<li>최근 720시간(30일) 내에 광고주 도메인 1~2회 방문한 유저에게 광고를 노출</li>
+														</ul>
+													</div>
+												</div>
+											</td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="cpc_list">
+													<input type="checkbox" id="checkbox23" checked>
+													<label for="checkbox23">헤비유저매칭(HU)</label>
+													<div class="info">
+														<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+														<ul class="info_box">
+															<li>광고주 사이트에 3회 이상 방문한 유저에게 광고를 노출</li>
+														</ul>
+													</div>
+												</div>
+											</td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="cpc_list">
+													<input type="checkbox" id="checkbox24" checked>
+													<label for="checkbox24">리턴매칭(RM)</label>
+													<div class="info">
+														<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+														<ul class="info_box">
+															<li>광고주 사이트에 1~2회 방문한 유저에게 광고를 노출</li>
+														</ul>
+													</div>
+												</div>
+											</td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="cpc_list">
+													<input type="checkbox" id="checkbox25" checked>
+													<label for="checkbox25">투데이베스트(ST)</label>
+													<div class="info">
+														<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+														<ul class="info_box">
+															<li>모비온과 제휴 된 쇼핑앱에 노출</li>
+															<li>쇼핑앱 : 옷잘남, 스타일썸, 스타일룩</li>
+														</ul>
+													</div>
+												</div>
+											</td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="cpc_list">
+													<input type="checkbox" id="checkbox26" checked>
+													<label for="checkbox26">문맥매칭(MT)</label>
+													<div class="info">
+														<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+														<ul class="info_box">
+															<li>광고주 사이트에서 구매한 유저들이 유입된 키워드를<br>분석 > 제휴 된 매체에 해당 키워드로 유입된 유저들에게 광고 노출</li>
+														</ul>
+													</div>
+												</div>
+											</td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="cpc_list">
+													<input type="checkbox" id="checkbox27" checked>
+													<label for="checkbox27">휴면유저매칭(RU)</label>
+													<div class="info">
+														<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+														<ul class="info_box">
+															<li>광고주 사이트에서 구매 후, 30일이상 활동이 없는 유저에게 광고를 노출</li>
+														</ul>
+													</div>
+												</div>
+											</td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="cpc_list">
+													<input type="checkbox" id="checkbox28" checked>
+													<label for="checkbox28">위클리가망고객매칭(PU)</label>
+													<div class="info">
+														<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+														<ul class="info_box">
+															<li>경쟁사에서 일주일 이내 장바구니에 넣었거나 구매한<br>상품의 카테고리와 동일한 카테고리의 추천 상품 광고를 노출</li>
+														</ul>
+													</div>
+												</div>
+											</td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="cpc_list">
+													<input type="checkbox" id="checkbox29" checked>
+													<label for="checkbox29">먼슬리가망고객매칭(MU)</label>
+													<div class="info">
+														<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+														<ul class="info_box">
+															<li>경쟁사에서 한 달 이내 장바구니에 넣었거나 구매한<br>상품의 카테고리와 동일한 카테고리의 추천 상품 광고를 노출</li>
+														</ul>
+													</div>
+												</div>
+											</td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="cpc_list">
+													<input type="checkbox" id="checkbox30" checked>
+													<label for="checkbox30">헤비성향매칭(HM)</label>
+													<div class="info">
+														<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+														<ul class="info_box">
+															<li>7일(168시간) 동안 3회 이상 방문한 카테고리의 도메인 송출</li>
+														</ul>
+													</div>
+												</div>
+											</td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="cpc_list">
+													<input type="checkbox" id="checkbox31" checked>
+													<label for="checkbox31">가망고객매칭(BP)</label>
+													<div class="info">
+														<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+														<ul class="info_box">
+															<li>유저의 소비성향을 정교하게 파악하여 도출된 성향에 따른 상품을 노출</li>
+														</ul>
+													</div>
+												</div>
+											</td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="cpc_list">
+													<input type="checkbox" id="checkbox32" checked>
+													<label for="checkbox32">발신이력매칭(TM)</label>
+													<div class="info">
+														<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+														<ul class="info_box">
+															<li>광고주 사이트에 유입된 유저의 성별과 연령대를 분석하여,<br>해당 성별과 연령대의 유저에게 광고를 노출</li>
+														</ul>
+													</div>
+												</div>
+											</td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+										</tr>
+									</tbody>
+								</table>
+								<table class="table">
+									<thead>
+										<tr>
+											<th>타겟팅 사용 여부</th>
+											<th>가중치</th>
+											<th>노출율</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<div class="cpc_list">
+													<input type="checkbox" id="checkbox33">
+													<label for="checkbox33">미디어매칭(MO)</label>
+												</div>
+											</td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="cpc_list">
+													<input type="checkbox" id="checkbox33" checked>
+													<label for="checkbox33">성향매칭(UM)</label>
+													<div class="info">
+														<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+														<ul class="info_box">
+															<li>광고주 사이트와 성향이 유사한 사이트에 유입된 유저들에게 광고를 노출</li>
+															<li>Ex. B, C 여성의류 사이트 방문 유저에게 A 여성의류 사이트 노출</li>
+														</ul>
+													</div>
+												</div>
+											</td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="cpc_list">
+													<input type="checkbox" id="checkbox34" checked>
+													<label for="checkbox34">검색어매칭(KL)</label>
+													<div class="info">
+														<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+														<ul class="info_box">
+															<li>광고주 사이트로 유입 된 키워드를 분석하여, 해당 키워드로 제휴 된 매체에<br>유입 된 유저들에게 광고를 노출</li>
+															<li>유입 키워드의 경우 모비온 스크립트가 설치된 광고주만 등록 가능하며,<br>스크립트가 없을 시 직접 등록한 키워드를 매칭하여 광고 송출이 가능합니다.
+															</li>
+														</ul>
+													</div>
+												</div>
+											</td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="cpc_list">
+													<input type="checkbox" id="checkbox35" checked>
+													<label for="checkbox35">앱프로파일매칭(AT)</label>
+													<div class="info">
+														<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+														<ul class="info_box">
+															<li>구글스토어에 있는 어플을 대상으로, 광고주 사이트와 유사한<br>성향의 어플을 사용하는 유저들에게 광고를 노출</li>
+															<li>자사/타사/관심사 APP 등</li>
+														</ul>
+													</div>
+												</div>
+											</td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="cpc_list">
+													<input type="checkbox" id="checkbox36" checked>
+													<label for="checkbox36">오디언스매칭(AU)</label>
+													<div class="info">
+														<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+														<ul class="info_box">
+															<li>광고주 사이트에 가장 많이 방문한 유저들의<br>관심분야를 모비온 AI를 통해 분석하여,<br>해당 분야의 기사를 본 유저들에게 광고를 노출</li>
+														</ul>
+													</div>
+												</div>
+											</td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="cpc_list">
+													<input type="checkbox" id="checkbox37" checked>
+													<label for="checkbox37">카테고리매칭(CM)</label>
+													<div class="info">
+														<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+														<ul class="info_box">
+															<li>광고주 사이트와 연관성이 있는 카테고리 지면에 광고를 노출</li>
+														</ul>
+													</div>
+												</div>
+											</td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="cpc_list">
+													<input type="checkbox" id="checkbox38">
+													<label for="checkbox38">쇼라베이스(PA)</label>
+													<div class="info">
+														<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+														<ul class="info_box">
+															<li>라이브커머스 광고주 전용으로 단시간 동안<br>빠르게 유입을 받을 수 있도록 논 타게팅으로 송출</li>
+														</ul>
+													</div>
+												</div>
+											</td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="cpc_list">
+													<input type="checkbox" id="checkbox39" checked>
+													<label for="checkbox39">베이스광고(AD)</label>
+													<div class="info">
+														<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+														<ul class="info_box">
+															<li>광고주 사이트에 유입된 유저의 성별과 연령대를 분석하여,<br>해당 성별과 연령대의 유저에게 광고를 노출</li>
+														</ul>
+													</div>
+												</div>
+											</td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="cpc_list">
+													<input type="checkbox" id="checkbox40" checked>
+													<label for="checkbox40">브랜드박스(SA)</label>
+												</div>
+											</td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="cpc_list">
+													<input type="checkbox" id="checkbox41" checked>
+													<label for="checkbox41">퍼포먼스광고(PF)</label>
+													<div class="info">
+														<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
+														<ul class="info_box">
+															<li>광고주의 방문 고객을 원하는 세그먼트로 직접 분류하여 광고를 노출</li>
+														</ul>
+													</div>
+												</div>
+											</td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+											<td><input type="text" maxlength="3" placeholder="100"></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="box_content">
 					<h2>광고 송출</h2>
 					<ul class="form_wrap">
 						<li>
