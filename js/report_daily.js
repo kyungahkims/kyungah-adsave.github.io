@@ -86,46 +86,49 @@ $(document).ready(function () {
 		paging: false,
 		scrollCollapse: true,
 		scrollY: '750px',
+		scrollX: "100%",
+		scrollXInner: "1400px",
 		info: false,
 		order: [
 			[0, "desc"]
 		],
-		"retrieve": true
+		retrieve: true,
 	});
 
 	$('#table_filter').hide();
 
-	/* 복사 버튼, 엑셀 버튼 */
+	/* 컬럼 설정 버튼 복사 버튼, 엑셀 버튼 */
 	const buttons = new $.fn.dataTable.Buttons(table, {
 		buttons: [{
+				extend: 'colvis',
+				text: '컬럼 설정',
+				/* columns: ':not(:last-child)', */
+				className: 'btncolumns',
+			},
+			{
 				extend: 'copyHtml5',
 				text: '복사',
-				className: 'btncopy'
+				className: 'btncopy',
+				action: function (e, dt, node, config) {
+					$.fn.dataTable.ext.buttons.copyHtml5.action.call(this, e, dt, node, config);
+					dt.buttons.info('', '테이블 데이터가 복사되었습니다.');
+					setTimeout(function () {
+						$('.dt-button-info').fadeOut();
+					}, 1500);
+				}
 			},
 			{
 				extend: 'excelHtml5',
 				text: '엑셀',
 				filename: '일자별 수익금 보고서',
-				footer: true,
-				bom: true,
 				className: 'btnexcel',
-				title: null,
-				autoWidth: true,
-				customize: function (xlsx) {
-					const sheet = xlsx.xl.worksheets['sheet1.xml'];
-					$('row c', sheet).each(function () {
-						$(this).attr('s', '25');
-					});
-					$('row:first c', sheet).attr('s', '32');
-					const col = $('col', sheet);
-					$(col[0]).attr('width', 15);
-					$(col[1]).attr('width', 15);
-				}
 			}
 		]
 	});
 
 	/* 버튼 위치 조정 */
-	table.button().container().appendTo('.length_wrap');
+	table.buttons().container().appendTo('.length_wrap');
+	/* table.buttons.info('', '테이블 데이터가 복사되었습니다.'); */
 	$('.btncopy').insertAfter('.select_box_wrap');
+	$('.btncolumns').prependTo('.select_box_wrap');
 });

@@ -42,16 +42,6 @@ $('.form_box_wrapper1 .form_box_wrap button').click(function () {
 	$('.form_box_wrapper1').find($('.form_box_wrap button')).removeClass('active');
 	$(this).addClass('active');
 
-	$('.form_box_wrapper2 .form_box').removeClass('vertical_height square_height horizontal_height');
-
-	if ($(this).find('span').hasClass('vertical_rectangle')) {
-		$('.form_box_wrapper2 .form_box').addClass('vertical_height');
-	} else if ($(this).find('span').hasClass('square')) {
-		$('.form_box_wrapper2 .form_box').addClass('square_height');
-	} else if ($(this).find('span').hasClass('horizontal_rectangle')) {
-		$('.form_box_wrapper2 .form_box').addClass('horizontal_height');
-	}
-
 	$('.form_box_wrapper2').css('display', 'flex');
 
 	/* 처음 등록 시 .new 클래스 화면 예시*/
@@ -61,8 +51,39 @@ $('.form_box_wrapper1 .form_box_wrap button').click(function () {
 	}
 });
 
-$('.form_box_wrapper2 .form_box_wrap button').click(function () {
+$('.form_box_wrapper2 .form_box_wrap button:nth-child(1)').click(function () {
 	$(this).toggleClass('active');
+});
+
+/* CPC 일괄 수정 */
+$('input[name="CPC"]').on('change', function () {
+	const selectedId = $(this).attr('id');
+
+	$('.table_sel1, .table_sel2, .table_sel13').find('input').val('');
+
+	if (selectedId === 'radio18') {
+		$('.table_sel1').css('display', 'table-cell');
+		$('.table_sel2, .table_sel3').css('display', 'none');
+	} else if (selectedId === 'radio19') {
+		$('.table_sel2').css('display', 'table-cell');
+		$('.table_sel1, .table_sel3').css('display', 'none');
+	} else if (selectedId === 'radio20') {
+		$('.table_sel3').css('display', 'table-cell');
+		$('.table_sel1, .table_sel2').css('display', 'none');
+	}
+});
+
+
+/* 전체 사용 체크박스 */
+$('#checkbox0').on('change', function () {
+	$('.cpc_list input').prop('checked', $(this).is(':checked'));
+});
+
+$('.cpc_list input').on('change', function () {
+	const allChecked = $(".table_group .cpc_list input").length === ($('.table_group .cpc_list input:checked').length);
+	$('#checkbox0').prop('checked', allChecked);
+	console.log($(".cpc_list input").length, $('.cpc_list input:checked').length);
+
 });
 
 /* 최후의 순간 옵션 */
@@ -85,4 +106,17 @@ $(".move_wrap button").click(function () {
 
 	$(this).prevAll(".move").first().text(rightMove);
 	$(this).nextAll(".move").first().text(leftMove);
+});
+
+/* 미리보기 */
+$('.pop1').click(function (e) {
+	e.stopPropagation();
+});
+
+$('.preview').click(function () {
+	$('.modal_wrap1').css('display', 'flex');
+});
+
+$('.modal_wrap1').click(function () {
+	$('.modal_wrap1').css('display', 'none');
 });
