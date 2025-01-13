@@ -160,14 +160,8 @@
           align-items: flex-start;
   margin-top: 40px;
 }
-.content .form_wrap .form_box_wrapper2 .form_box_wrap .form_box.horizontal_height {
-  height: 140px;
-}
-.content .form_wrap .form_box_wrapper2 .form_box_wrap .form_box.square_height {
-  height: 240px;
-}
-.content .form_wrap .form_box_wrapper2 .form_box_wrap .form_box.vertical_height {
-  height: 300px;
+.content .form_wrap .form_box_wrapper2 .form_box_wrap .form_box {
+  position: relative;
 }
 .content .form_wrap .form_box_wrapper2 .form_box_wrap .form_box button {
   background-color: #ecfaff;
@@ -177,6 +171,19 @@
 }
 .content .form_wrap .form_box_wrapper2 .form_box_wrap .form_box button.active .size {
   color: #fff;
+}
+.content .form_wrap .form_box_wrapper2 .form_box_wrap .form_box .preview {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 27px;
+  height: 27px;
+  border-radius: 3px;
+  background: #17a2ff url("../img/icon_preview.png") no-repeat center/contain;
+  border: 1px solid #fff;
+}
+.content .form_wrap .form_box_wrapper2 .form_box_wrap .form_box .preview.active {
+  background-color: #eee;
 }
 .content .form_wrap .form_box_wrapper2 .form_box_none {
   display: none;
@@ -294,4 +301,78 @@
 }
 .content .form_wrap .radio_sel2 {
   display: none;
+}
+.content .table_group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-column-gap: 40px;
+     -moz-column-gap: 40px;
+          column-gap: 40px;
+}
+.content .table {
+  width: 100%;
+  max-width: 360px;
+}
+.content .table.mini_table {
+  margin: 40px 0 10px;
+}
+.content .table.mini_table .table_sel2,
+.content .table.mini_table .table_sel3 {
+  display: none;
+}
+.content .table.mini_table td {
+  text-align: center;
+}
+.content .table thead {
+  font-size: 14px;
+}
+.content .table thead th {
+  text-align: center;
+  padding-bottom: 10px;
+}
+.content .table thead th:first-child {
+  text-align: left;
+}
+.content .table tbody td {
+  padding: 3px;
+}
+.content .table .cpc_list {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 13px;
+  margin-right: 5px;
+}
+.content .table input[type=text] {
+  width: 100% !important;
+  max-width: 80px;
+  margin-right: 0 !important;
+}
+.content .table label {
+  line-height: 1.9;
+  white-space: nowrap;
+  padding-left: 5px;
+  cursor: pointer;
+}
+
+/* modal_wrap1 */
+.modal_wrap1 .pop1 {
+  width: 1020px;
+}
+.modal_wrap1 .pop1 iframe {
+  width: 100%;
+  max-width: 970px;
+  min-height: 602px;
+  height: 100%;
+  margin-top: 20px;
 }/*# sourceMappingURL=setting.css.map */

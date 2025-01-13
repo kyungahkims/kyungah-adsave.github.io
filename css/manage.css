@@ -68,27 +68,6 @@
 .modal_wrap .pop3 {
   width: 450px;
 }
-.modal_wrap .pop_title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-bottom: 1px solid #e3e3e3;
-  padding-bottom: 20px;
-  margin-bottom: 18px;
-}
-.modal_wrap .pop_title h3 {
-  font-size: 18px;
-  font-weight: bold;
-}
-.modal_wrap .pop_title button {
-  background-color: transparent;
-}
 .modal_wrap textarea {
   width: 100%;
   height: 120px;

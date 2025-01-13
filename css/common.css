@@ -919,41 +919,6 @@ aside.active nav .navi_wrap .subs ul li:not(:last-child) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /* .select_box_wrap {
-  	position: relative;
-
-  	.select_box {
-  		display: none;
-  		position: absolute;
-  		top: 33px;
-  		z-index: 1000;
-  		height: 282px;
-  		white-space: nowrap;
-  		border-radius: 3px;
-  		border: 1px solid #cbcbcb;
-  		background-color: #fff;
-  		box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.05);
-  		padding: 4px 0;
-  		overflow-y: auto;
-
-  		li {
-  			text-decoration: line-through;
-  			color: #ff0c0c;
-  			font-size: 14px;
-  			padding: 7px 14px;
-  			cursor: pointer;
-
-  			&.active {
-  				text-decoration: none;
-  				color: #222;
-  			}
-
-  			&:hover {
-  				background-color: #f9f9f9;
-  			}
-  		}
-  	}
-  } */
 }
 .content .table_menu_wrap button {
   height: 30px;
@@ -1079,10 +1044,6 @@ aside.active nav .navi_wrap .subs ul li:not(:last-child) {
   text-align: center;
   padding: 10px !important;
   border-bottom: 1px solid #e3e3e3;
-}
-.content .table_wrap .table-hover tbody tr:hover {
-  background-color: #f8f8f8;
-  cursor: pointer;
 }
 .content .table_wrap .dataTables_wrapper.no-footer .dataTables_scrollBody {
   border-bottom: none !important;
@@ -1285,6 +1246,12 @@ input[type=checkbox]:checked {
   background: url("../img/checkbox-on.svg") left center no-repeat;
 }
 
+input[type=checkbox]:disabled {
+  background: none;
+  background-color: #ddd;
+  border: 1px solid #d8d8d8;
+}
+
 /* color */
 .blue {
   color: #5a6ee7;
@@ -1334,6 +1301,27 @@ input[type=checkbox]:checked {
           box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.15);
   background-color: #fff;
   padding: 20px 25px 40px 25px;
+}
+.modal_wrap .pop_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #e3e3e3;
+  padding-bottom: 20px;
+  margin-bottom: 18px;
+}
+.modal_wrap .pop_title h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+.modal_wrap .pop_title button {
+  background-color: transparent;
 }
 
 /* 달력 라이브러리 */

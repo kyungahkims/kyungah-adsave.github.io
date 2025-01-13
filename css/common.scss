@@ -894,42 +894,6 @@ aside {
 
 			.length_group {
 				display: flex;
-
-				/* .select_box_wrap {
-					position: relative;
-
-					.select_box {
-						display: none;
-						position: absolute;
-						top: 33px;
-						z-index: 1000;
-						height: 282px;
-						white-space: nowrap;
-						border-radius: 3px;
-						border: 1px solid #cbcbcb;
-						background-color: #fff;
-						box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.05);
-						padding: 4px 0;
-						overflow-y: auto;
-
-						li {
-							text-decoration: line-through;
-							color: #ff0c0c;
-							font-size: 14px;
-							padding: 7px 14px;
-							cursor: pointer;
-
-							&.active {
-								text-decoration: none;
-								color: #222;
-							}
-
-							&:hover {
-								background-color: #f9f9f9;
-							}
-						}
-					}
-				} */
 			}
 		}
 
@@ -1047,11 +1011,6 @@ aside {
 					border-bottom: 1px solid #e3e3e3;
 				}
 			}
-		}
-
-		.table-hover tbody tr:hover {
-			background-color: #f8f8f8;
-			cursor: pointer;
 		}
 
 		.dataTables_wrapper.no-footer .dataTables_scrollBody {
@@ -1245,6 +1204,12 @@ input[type="checkbox"]:checked {
 	background: url('../img/checkbox-on.svg') left center no-repeat;
 }
 
+input[type="checkbox"]:disabled {
+	background: none;
+	background-color: #ddd;
+	border: 1px solid #d8d8d8;
+}
+
 /* color */
 .blue {
 	color: #5a6ee7;
@@ -1288,6 +1253,24 @@ input[type="checkbox"]:checked {
 		box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.15);
 		background-color: #fff;
 		padding: 20px 25px 40px 25px;
+	}
+
+	.pop_title {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: 1px solid #e3e3e3;
+		padding-bottom: 20px;
+		margin-bottom: 18px;
+
+		h3 {
+			font-size: 18px;
+			font-weight: bold;
+		}
+
+		button {
+			background-color: transparent;
+		}
 	}
 }
 

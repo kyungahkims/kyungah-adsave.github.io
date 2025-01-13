@@ -6,6 +6,7 @@
 
 /* box */
 .box {
+	position: relative;
 	display: flex;
 	align-items: center;
 	width: 100%;
@@ -64,6 +65,27 @@
 	strong {
 		font-size: 33px;
 	}
+
+	/* info */
+	.info {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+
+		.info_btn {
+			margin-left: 0;
+			margin-top: 0;
+
+			&::after {
+				background: url('../img/icon-info.svg') no-repeat center;
+			}
+		}
+
+		.info_box {
+			top: -35px;
+			left: -225px;
+		}
+	}
 }
 
 /* box2 */
@@ -98,9 +120,3 @@
 		padding: 30px 20px;
 	}
 }
-
-.adsave {
-	margin-right: 20px;
-}
-
-.adsave img {width: 80px;}
