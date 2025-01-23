@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>애드세이브</title>
+	<style>
+		/* font */
+		@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+		/* Normalize */
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		/* switch */
+		.switch_wrapper {
+			position: absolute;
+			bottom: 20px;
+			right: 20px;
+			display: flex;
+			justify-content: flex-end;
+			font-family: 'Pretendard';
+		}
+
+		.pop2 .switch_wrap {
+			box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+		}
+
+		.switch_wrap {
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 170px;
+			height: 56px;
+			font-size: 13px;
+			font-weight: 600;
+			border: 1px solid #17a2ff;
+			border-radius: 28px;
+			background-color: #f1f8ff;
+			z-index: 999;
+		}
+
+		.switch_wrap button {
+			position: absolute;
+			top: -18px;
+			right: 5px;
+			font-family: inherit;
+			border: none;
+			background-color: transparent;
+			cursor: pointer;
+		}
+
+		.switch_title {
+			line-height: 1.2;
+			text-align: center;
+		}
+
+		.switch {
+			position: relative;
+			display: inline-block;
+			width: 55px;
+			height: 24px;
+			margin-left: 12px;
+		}
+
+		.switch input {
+			opacity: 0;
+			width: 0;
+			height: 0;
+		}
+
+		.switch .slider {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			border-radius: 54px;
+			background-color: #17a2ff;
+			transition: all 0.4s;
+			cursor: pointer;
+		}
+
+		.switch .slider:before {
+			position: absolute;
+			content: "";
+			left: 5px;
+			bottom: 4px;
+			height: 16px;
+			width: 16px;
+			border-radius: 50%;
+			background-color: #fff;
+			transition: all 0.4s;
+		}
+
+		.switch input:checked+.slider {
+			background-color: #bbb;
+		}
+
+		.switch input:checked+.slider:before {
+			transform: translateX(29px);
+		}
+
+		.switch .label:before {
+			content: "off";
+			position: relative;
+			top: 4px;
+			right: -10px;
+			font-size: 14px;
+			font-weight: 300;
+			color: #fff;
+			cursor: pointer;
+		}
+
+		.switch input:not(:checked)~.label:before {
+			content: "on";
+			top: 3px;
+			right: -27px;
+		}
+
+		/* scrolling_wrap */
+		.scrolling_wrap {
+			position: absolute;
+			right: 5px;
+			min-width: 440px;
+			height: 56px;
+			overflow: hidden;
+		}
+
+		.scrolling {
+			position: absolute;
+			top: 11px;
+			left: 100%;
+			right: -100%;
+			transform-origin: 50% 50%;
+			display: flex;
+			align-items: center;
+			height: 35px;
+			font-size: 13px;
+			white-space: nowrap;
+			color: #fff;
+			border-radius: 17px 0 0 17px;
+			box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+			background-image: linear-gradient(to right, #176cff 6%, #17a2ff 50%);
+			padding: 10px 20px;
+			transition: 0.5s;
+			z-index: 998;
+		}
+
+		.scrolling.active {
+			left: 0;
+			right: 0;
+		}
+
+		.scrolling::before {
+			content: "";
+			display: inline-block;
+			width: 15px;
+			height: 15px;
+			background: url('../img/ico-pt.svg') no-repeat center;
+			margin-right: 5px;
+		}
+
+		.scrolling a {
+			text-decoration: none;
+			display: flex;
+		}
+
+		.scrolling a::after {
+			content: "";
+			width: 15px;
+			height: 15px;
+			background: url('../img/btn-pay-arrow.svg') no-repeat center;
+			margin-left: 4px;
+		}
+
+		.scrolling span {
+			display: flex;
+			align-items: center;
+			font-weight: bold;
+			text-decoration: none;
+			color: #000;
+			margin-left: 10px;
+			border-bottom: 1px solid #000;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="pop2 switch_wrapper">
+		<div class="switch_wrap">
+			<button type="button" aria-label="닫기 버튼"><img src="../img/btn-floating-close.svg" alt="닫기"></button>
+			<div class="switch_title">
+				<img src="../img/img-logo2.svg" alt="애드세이브로고">
+				<div>구동중</div>
+			</div>
+			<label class="switch">
+				<input type="checkbox" aria-label="토글 On/Off">
+				<span class="slider"></span>
+				<span class="label" aria-hidden="true"></span>
+			</label>
+		</div>
+		<div class="scrolling_wrap">
+			<div class="scrolling">1 PAY가 적립되었습니다.<a href="#"><span>총 10 1PAY</span></a></div>
+		</div>
+	</div><!-- pop2 -->
+</body>
+
+</html>

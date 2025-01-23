@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>애드세이브</title>
+	<style>
+		/* font */
+		@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+		/* Normalize */
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		.pop1 {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			width: 480px;
+			height: 467px;
+			font-family: 'Pretendard';
+			color: #222;
+			border: 1px solid #17a2ff;
+			background-color: #fff;
+			z-index: 1000;
+		}
+
+		.pop1 h2 {
+			font-size: 20px;
+			font-weight: 600;
+			text-align: center;
+			color: #fff;
+			background-image: linear-gradient(to right, #176cff, #17a2ff 50%);
+			padding: 18px;
+		}
+
+		.pop1 .close_btn {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			border: none;
+			background-color: transparent;
+			cursor: pointer;
+		}
+
+		.pop_body {
+			padding: 0 40px;
+		}
+
+		.pop_body h3 {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 13px;
+			font-weight: 500;
+			border-bottom: 1px solid #dfdfdf;
+			padding: 25px 0;
+		}
+
+		.pop_body h3::before {
+			content: "";
+			width: 14px;
+			height: 14px;
+			background: url('../img/ico-alert.svg') no-repeat center;
+			margin-right: 5px;
+		}
+
+		.pop_body p {
+			font-size: 14px;
+			line-height: 1.71;
+			letter-spacing: -0.28px;
+			border-bottom: 1px solid #dfdfdf;
+			padding: 25px 0;
+		}
+
+		.pop_body p span {
+			color: #f82c2c;
+		}
+
+		.pop_body .info {
+			font-size: 14px;
+			line-height: 1.71;
+			margin: 25px 0 12px;
+		}
+
+		.pop_body .info .sky {
+			color: #17a2ff;
+		}
+
+		.pop_body .info .green {
+			color: #41b817;
+		}
+
+		.pop_body .point_btn {
+			position: relative;
+			font-family: inherit;
+			font-size: 13px;
+			text-decoration: none;
+			color: inherit;
+			border: 1px solid #d9d9d9;
+			border-radius: 5px;
+			background-color: #fff;
+			padding: 7px 15px;
+			cursor: pointer;
+			z-index: 2;
+		}
+
+		/* switch */
+		.switch_wrapper {
+			position: absolute;
+			bottom: 20px;
+			right: 20px;
+			display: flex;
+			justify-content: flex-end;
+			font-family: 'Pretendard';
+		}
+
+		.pop2 .switch_wrap {
+			box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+		}
+
+		.switch_wrap {
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 170px;
+			height: 56px;
+			font-size: 13px;
+			font-weight: 600;
+			border: 1px solid #17a2ff;
+			border-radius: 28px;
+			background-color: #f1f8ff;
+			z-index: 999;
+		}
+
+		.switch_wrap button {
+			position: absolute;
+			top: -18px;
+			right: 5px;
+			font-family: inherit;
+			border: none;
+			background-color: transparent;
+			cursor: pointer;
+		}
+
+		.switch_title {
+			line-height: 1.2;
+			text-align: center;
+		}
+
+		.switch {
+			position: relative;
+			display: inline-block;
+			width: 55px;
+			height: 24px;
+			margin-left: 12px;
+		}
+
+		.switch input {
+			opacity: 0;
+			width: 0;
+			height: 0;
+		}
+
+		.switch .slider {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			border-radius: 54px;
+			background-color: #17a2ff;
+			transition: all 0.4s;
+			cursor: pointer;
+		}
+
+		.switch .slider:before {
+			position: absolute;
+			content: "";
+			left: 5px;
+			bottom: 4px;
+			height: 16px;
+			width: 16px;
+			border-radius: 50%;
+			background-color: #fff;
+			transition: all 0.4s;
+		}
+
+		.switch input:checked+.slider {
+			background-color: #bbb;
+		}
+
+		.switch input:checked+.slider:before {
+			transform: translateX(29px);
+		}
+
+		.switch .label:before {
+			content: "off";
+			position: relative;
+			top: 4px;
+			right: -10px;
+			font-size: 14px;
+			font-weight: 300;
+			color: #fff;
+			cursor: pointer;
+		}
+
+		.switch input:not(:checked)~.label:before {
+			content: "on";
+			top: 3px;
+			right: -27px;
+		}
+
+		/* scrolling_wrap */
+		.scrolling_wrap {
+			position: absolute;
+			right: 5px;
+			min-width: 440px;
+			height: 56px;
+			overflow: hidden;
+		}
+
+		.scrolling {
+			position: absolute;
+			top: 11px;
+			left: 100%;
+			right: -100%;
+			transform-origin: 50% 50%;
+			display: flex;
+			align-items: center;
+			height: 35px;
+			font-size: 13px;
+			white-space: nowrap;
+			color: #fff;
+			border-radius: 17px 0 0 17px;
+			box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+			background-image: linear-gradient(to right, #176cff 6%, #17a2ff 50%);
+			padding: 10px 20px;
+			transition: 0.5s;
+			z-index: 998;
+		}
+
+		.scrolling.active {
+			left: 0;
+			right: 0;
+		}
+
+		.scrolling::before {
+			content: "";
+			display: inline-block;
+			width: 15px;
+			height: 15px;
+			background: url('../img/ico-pt.svg') no-repeat center;
+			margin-right: 5px;
+		}
+
+		.scrolling a {
+			text-decoration: none;
+			display: flex;
+		}
+
+		.scrolling a::after {
+			content: "";
+			width: 15px;
+			height: 15px;
+			background: url('../img/btn-pay-arrow.svg') no-repeat center;
+			margin-left: 4px;
+		}
+
+		.scrolling span {
+			display: flex;
+			align-items: center;
+			font-weight: bold;
+			text-decoration: none;
+			color: #000;
+			margin-left: 10px;
+			border-bottom: 1px solid #000;
+		}
+
+		.pop2 {
+			display: none;
+		}
+	</style>
+	<script src="../js/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+
+	<div class="pop1">
+		<h2>애드세이브 구동안내</h2>
+		<button type="button" class="close_btn" aria-label="닫기 버튼"><img src="../img/btn-popup-close2.svg" alt="닫기"></button>
+		<div class="pop_body">
+			<h3>쾌적한 컨텐츠 이용을 위하여 ADSAVE가 구동중입니다.</h3>
+			<p>사이트의 컨텐츠 제공은 광고 수익을 통해 제공 되기 때문에<br>애드블럭의 사용은 사이트의 컨텐츠 질을 저하시킵니다.<br>애드세이브는 보다 쾌적한 컨텐츠를 제공하기 위한
+				시스템입니다.<br><span>애드세이브 구동을 중지하면 컨텐츠 사용에 제한이 따를 수 있으며</span><br><span>화면이 정상적으로 보여지지 않을 수도 있습니다.</span></p>
+			<div class="info"><span class="sky">ADSAVE</span>는 <span class="green">MY1PAY</span>와 연계하여 컨텐츠를 이용하시는 모든
+				분들께<br>포인트를 지급해 드립니다.</div>
+			<a href="#" class="point_btn">포인트 확인하러 가기</a>
+		</div>
+		<div class="switch_wrapper">
+			<div class="switch_wrap">
+				<div class="switch_title">
+					<img src="../img/img-logo2.svg" alt="애드세이브로고">
+					<div>구동중</div>
+				</div>
+				<label class="switch">
+					<input type="checkbox" aria-label="토글 On/Off">
+					<span class="slider"></span>
+					<span class="label" aria-hidden="true"></span>
+				</label>
+			</div>
+			<div class="scrolling_wrap">
+				<div class="scrolling">1 PAY가 적립되었습니다.<a href="#"><span>총 10 1PAY</span></a></div>
+			</div>
+		</div>
+	</div><!-- pop1 -->
+
+	<div class="pop2 switch_wrapper">
+		<div class="switch_wrap">
+			<button type="button" aria-label="닫기 버튼"><img src="../img/btn-floating-close.svg" alt="닫기"></button>
+			<div class="switch_title">
+				<img src="../img/img-logo2.svg" alt="애드세이브로고">
+				<div>구동중</div>
+			</div>
+			<label class="switch"><input type="checkbox"><span class="slider"></span><span class="label"></span></label>
+		</div>
+		<div class="scrolling_wrap">
+			<div class="scrolling">1 PAY가 적립되었습니다.<a href="#"><span>총 10 1PAY</span></a></div>
+		</div>
+	</div><!-- pop2 -->
+
+
+	<!-- test 임시태그 -->
+	<button type="button" class="click"
+		style="margin: 10px; border: none; background-color: #000; color: #fff; padding: 10px 16px; border-radius: 5px; cursor: pointer;">광고클릭</button>
+
+	<script>
+		$('.close_btn').click(function () {
+			$('.pop1').hide();
+			$('.pop2').css('display', 'flex');
+		});
+		$('.click').click(function () {
+			$('.scrolling').addClass('active');
+			setTimeout(function () {
+				$('.scrolling').removeClass('active');
+			}, 5000);
+		});
+	</script>
+</body>
+
+</html>
