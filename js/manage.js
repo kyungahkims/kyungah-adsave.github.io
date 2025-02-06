@@ -17,7 +17,7 @@ $(document).ready(function () {
 				width: "250px",
 				'render': function (data) {
 					/* 아이콘 1~6 */
-					return `<div class="manage_wrap"><button title="ON" class="manage on"></button><button title="메모" class="manage memo"></button><a href="#" title="수정" class="manage modify"></a><a href="#" title="설정" class="manage setting"></a><a href="#" title="리포트" class="manage report"></a><button title="해시태그" class="manage hashtag"></button><a href="#" title="노출설정" class="manage exposure"></a></div>`;
+					return `<div class="manage_wrap"><button title="ON" class="manage on"></button><button title="메모" class="manage memo"></button><a href="#" title="수정" class="manage modify"></a><a href="#" title="설정" class="manage setting"></a><a href="#" title="리포트" class="manage report"></a><button title="해시태그" class="manage hashtag"></button><a href="#" title="노출설정" class="manage exposure"></a><a href="#" title="마이원페이 연동" class="manage connection"></a></div>`;
 				}
 			},
 			{
@@ -159,6 +159,10 @@ $('#table').on('click', '.manage.hashtag', function () {
 	$(".modal_wrap2").css('display', 'flex');
 });
 
+$('#table').on('click', '.manage.connection', function () {
+	$(".modal_wrap4").css('display', 'flex');
+});
+
 /* 메모 모달 삭제 버튼 */
 $(document).on("click", ".remove_btn", function () {
 	Swal.fire({
@@ -207,3 +211,38 @@ $(document).on("click", ".save_btn", function () {
 			<button type="button" class="remove_btn">삭제</button>
 	`);
 });
+
+/* 이벤트 기간 & 종료일 없음 */
+function updateDatepicker() {
+	if ($('#modal_checkbox').is(':checked')) {
+		$('#dateInput2').daterangepicker({
+			singleDatePicker: true,
+			alwaysShowCalendars: true,
+			showCustomRangeLabel: false,
+			autoApply: true,
+			locale: {
+				format: 'YYYY-MM-DD',
+				daysOfWeek: ['일', '월', '화', '수', '목', '금', '토'],
+				monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+			}
+		});
+		$('#dateInput2').css('width', '130px');
+	} else {
+		$('#dateInput2').daterangepicker({
+			/* startDate: moment().subtract(6, 'days'), */
+			endDate: moment(),
+			alwaysShowCalendars: true,
+			showCustomRangeLabel: false,
+			autoApply: true,
+			locale: {
+				format: 'YYYY-MM-DD',
+				daysOfWeek: ['일', '월', '화', '수', '목', '금', '토'],
+				monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+			},
+		});
+		$('#dateInput2').css('width', '200px');
+	}
+}
+
+$('#modal_checkbox').on('change', updateDatepicker);
+$(document).ready(updateDatepicker);
