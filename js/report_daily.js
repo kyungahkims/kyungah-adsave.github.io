@@ -16,6 +16,21 @@ $(document).ready(function () {
 		columns: [{
 				data: 'date',
 				width: "100px",
+				'render': function (data) {
+					const dateString = new Date(new Date().getFullYear() + "-" + data.replace("-", "/"));
+					const dayOfWeek = dateString.getDay();
+					/* 폰트 색상 일요일 red_or, 토요일 blue_or */
+					let colorClass = "blue_or";
+					if (dayOfWeek === 0) {
+						colorClass = "red_or";
+					} else if (dayOfWeek === 6) {
+						colorClass = "blue_or";
+					} else {
+						colorClass = ""
+					}
+
+					return `<span class="${colorClass}">${data}</span>`;
+				}
 			},
 			{
 				data: "request",
@@ -89,6 +104,7 @@ $(document).ready(function () {
 		scrollX: "100%",
 		scrollXInner: "1400px",
 		info: false,
+		orderCellsTop: true, // 정렬버튼 제일 상단이동
 		order: [
 			[0, "desc"]
 		],

@@ -104,6 +104,7 @@ $(document).ready(function () {
 		scrollX: "100%",
 		scrollXInner: "1400px",
 		info: false,
+		orderCellsTop: true, // 정렬버튼 제일 상단이동
 		order: [
 			[12, "desc"]
 		],
