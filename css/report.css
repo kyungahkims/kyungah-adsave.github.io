@@ -39,4 +39,10 @@
 }
 .content .table_wrap .table tbody td {
   padding: 15px 5px !important;
+}
+.content .table_wrap .table tbody td .blue_or {
+  color: blue;
+}
+.content .table_wrap .table tbody td .red_or {
+  color: red;
 }/*# sourceMappingURL=report.css.map */

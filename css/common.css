@@ -1045,6 +1045,11 @@ aside.active nav .navi_wrap .subs ul li:not(:last-child) {
   padding: 10px !important;
   border-bottom: 1px solid #e3e3e3;
 }
+.content .table_wrap .table .tfoot_total th {
+  background-color: #ecfaff !important;
+  height: 51px;
+  padding: 0 5px !important;
+}
 .content .table_wrap .dataTables_wrapper.no-footer .dataTables_scrollBody {
   border-bottom: none !important;
 }

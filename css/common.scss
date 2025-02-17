@@ -1011,6 +1011,14 @@ aside {
 					border-bottom: 1px solid #e3e3e3;
 				}
 			}
+
+			.tfoot_total {
+				th {
+					background-color: #ecfaff !important;
+					height: 51px;
+					padding: 0 5px !important;
+				}
+			}
 		}
 
 		.dataTables_wrapper.no-footer .dataTables_scrollBody {
