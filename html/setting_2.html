@@ -354,35 +354,40 @@
 							</ul>
 						</li>
 						<li class="form_box_wrapper2">
-							<div class="title">프레임 형태
-							</div>
+							<div class="title">프레임 형태</div>
 							<ul class="form_box_wrap">
 								<li class="form_box">
 									<button type="button">
 										<span class="size">네이티브 형태 (프레임형태) A</span>
 									</button>
+									<button type="button" class="preview"></button>
 								</li>
 								<li class="form_box">
 									<button type="button">
 										<span class="size">네이티브 형태 (프레임형태) B</span>
 									</button>
+									<button type="button" class="preview"></button>
 								</li>
 								<li class="form_box">
 									<button type="button">
 										<span class="size">네이티브 형태 (프레임형태) C</span>
 									</button>
+									<button type="button" class="preview"></button>
 								</li>
 								<li class="form_box">
 									<button type="button">
 										<span class="size">네이티브 형태 (프레임형태) D</span>
 									</button>
+									<button type="button" class="preview"></button>
 								</li>
 								<li class="form_box">
 									<button type="button">
 										<span class="size">네이티브 형태 (프레임형태) E</span>
 									</button>
+									<button type="button" class="preview"></button>
 								</li>
-								<li class="form_box_none"><span class="red">제공된 프레임이 없습니다.</span></li><!-- 처음 등록 시 화면 form_box_wrapper1에 new클래스 추가 -->
+								<li class="form_box_none"><span class="red">제공된 프레임이 없습니다.</span></li>
+								<!-- 처음 등록 시 화면 form_box_wrapper1에 new클래스 추가 -->
 							</ul>
 						</li>
 					</ul>
@@ -536,7 +541,7 @@
 				<div class="box_content">
 					<h2>정산 정보</h2>
 					<ul class="form_wrap">
-						<li>
+						<li class="flex_s">
 							<div class="title">매체사 정산 방식
 								<div class="info">
 									<button type="button" aria-label="상세 설명 보기" class="info_btn"></button>
@@ -547,23 +552,40 @@
 									</ul>
 								</div>
 							</div>
-							<div class="flex_c">
-								<div class="calendar">
-									<div class="input_wrap">
-										<input type="text" id="dateInput" value="">
+							<ul class="group_wrap">
+								<li class="flex_c">
+									<div class="calendar">
+										<div class="input_wrap">
+											<input type="text" id="dateInput" value="">
+										</div>
 									</div>
-								</div>
-								<select>
-									<option hidden>선택하세요</option>
-									<option value="">RS</option>
-									<option value="">CPM</option>
-									<option value="">CPC</option>
-								</select>
-								<input type="text" class="w_260" placeholder="입력하세요.">
-								<input type="text" class="w_260" placeholder="비고 (50자 이내로 입력하세요.)">
-								<button type="button" aria-label="추가 버튼" class="add_btn"><img src="../img/btn-add.svg"
-										alt="추가"></button>
-							</div>
+									<select>
+										<option hidden>선택하세요</option>
+										<option value="">RS</option>
+										<option value="">CPM</option>
+										<option value="">CPC</option>
+									</select>
+									<input type="text" class="w_260" placeholder="입력하세요.">
+									<input type="text" class="w_260" placeholder="비고 (50자 이내로 입력하세요.)">
+									<button type="button" aria-label="추가 버튼" class="add_btn"></button>
+								</li>
+								<li class="flex_c">
+									<div class="calendar">
+										<div class="input_wrap">
+											<input type="text" id="dateInput" value="">
+										</div>
+									</div>
+									<select>
+										<option hidden>선택하세요</option>
+										<option value="">RS</option>
+										<option value="">CPM</option>
+										<option value="">CPC</option>
+									</select>
+									<input type="text" class="w_260" placeholder="입력하세요.">
+									<input type="text" class="w_260" placeholder="비고 (50자 이내로 입력하세요.)">
+									<button type="button" aria-label="삭제 버튼" class="remove_btn"></button>
+								</li>
+							</ul>
 						</li>
 					</ul>
 				</div>
@@ -584,6 +606,19 @@
 			</section><!-- section -->
 		</div><!-- wrapper -->
 	</div><!-- wrap -->
+	<div class="modal_wrap modal_wrap1">
+		<div class="pop pop1">
+			<div class="pop_title">
+				<h3>프레임 미리보기</h3>
+				<button type="button" aria-label="닫기 버튼" class="bt_close"><img src="../img/btn-popup-close.svg"
+						alt="닫기"></button>
+			</div>
+			<h5> - 네이티브 형태 (프레임형태) A</h5>
+			<div>
+				<iframe src="https://ims.mobon.net/Frtb/frame/WY03E46C01W061/sample/WY03E46C01W061.html" frameborder="0" scrolling="no"></iframe>
+			</div>
+		</div>
+	</div>
 	<script src="../js/common.js"></script>
 	<script src="../js/setting.js"></script>
 </body>
